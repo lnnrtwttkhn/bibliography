@@ -11,6 +11,10 @@ That way I can sync it with Seafile / Dropbox and provide a direct download link
 
 The `/papers` contains all `.pdf` files and will not be synced with the repo.
 
+## Rules
+* The `doi` file never contains `https://` etc.
+* Don't worry about changing the capitalization of words in the title. LaTex / Overleaf / `apacite` handle this automatically! :clap:
+
 ## Contributing
 
 If you spot any errors, please [contact Lennart Wittkuhn](mailto:wittkuhn@mpib-berlin.mpg.de)
