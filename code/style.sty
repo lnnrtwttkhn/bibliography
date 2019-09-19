@@ -1,4 +1,5 @@
-% select language:
+
+% select the language:
 \usepackage[english]{babel}
 % for direct text quotes:
 \usepackage{epigraph}
@@ -8,6 +9,8 @@
 \usepackage{comment}
 % package to use symbols like \degree etc.
 \usepackage{gensymb}
+% change spacing of lines:
+\usepackage[onehalfspacing]{setspace}
 % insert line numbers:
 \usepackage{lineno}
 \linenumbers
@@ -18,9 +21,7 @@
 \usepackage{hyperref}
 \hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, pdfnewwindow=true, urlcolor=blue}
 % create a glossary with recurring abbreviations:
-\usepackage[toc, xindy, shortcuts,nonumberlist]{glossaries}
-\loadglsentries{glossary}
-\makeglossaries
+\usepackage[toc, xindy, shortcuts, nonumberlist]{glossaries}
 % use apacite to create apa-style citations:
 \usepackage[sectionbib,numberedbib,bibnewpage]{apacite}
 % remove URLs from bibliography:
@@ -37,6 +38,8 @@
 % use packages to print captions:
 \usepackage{caption}
 \usepackage{subcaption}
+% convert .eps files to .pdf:
+\usepackage{epstopdf}
 % adjust the margins of the document:
 \usepackage[a4paper, left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
 % Set default font to sans serif
@@ -49,4 +52,10 @@
 % This command prevents hyperref from referencing the first time an acronym is used:
 \renewcommand*{\glslinkcheckfirsthyperhook}{\ifglsused{\glslabel}{}{\ifglshaslong{\glslabel}{\setkeys{glslink}{hyper=false}}{}}} 
 % This command turns all hyperrefs of acronyms to black:
-\renewcommand*{\glstextformat}[1]{\textcolor{black}{#1}} 
+\renewcommand*{\glstextformat}[1]{\textcolor{black}{#1}}
+% define new macro in order to be able to include keywords
+\providecommand{\keywords}[1]{\textbf{\textit{Keywords:}} #1}
+% package to change settings of ietm lists:
+\usepackage{enumitem}
+% change formatting "to save trees":
+% \usepackage{moreverb,savetrees}
