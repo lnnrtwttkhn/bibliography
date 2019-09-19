@@ -19,7 +19,10 @@ The `/papers` contains all `.pdf` files and will not be synced with the repo.
 Note: To use the bibliography as a submodule in `git` via Overleaf requires the repo to be publicly available.
 A workaround is to provide the `.bib`-file as a direct download from a synced website (e.g., Dropbox)
 
+## Usage
 
+* Add this repo as a submodule using `git submodule add https://github.com/lnnrtwttkhn/bibliography`
+* Update the submodule using `git submodule foreach git pull origin master`
 
 ## Rules
 * The `doi` file never contains `https://` etc.
