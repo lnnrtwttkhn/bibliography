@@ -43,3 +43,4 @@ Please see the [LICENSE.md](LICENSE.md) file for details.
 * [Software-generated bibliographic entries: common errors and other mistakes to check before use](https://tex.stackexchange.com/questions/386053/software-generated-bibliographic-entries-common-errors-and-other-mistakes-to-ch)
 * [How to remove http://dx.doi.org string from doi field in BibTeX style?](https://tex.stackexchange.com/questions/214393/how-to-remove-http-dx-doi-org-string-from-doi-field-in-bibtex-style)
 * [Creating glossary entries in separate file](https://tex.stackexchange.com/questions/287072/creating-glossary-entries-in-separate-file)
+* [Update Git submodule to latest commit on origin](https://stackoverflow.com/questions/5828324/update-git-submodule-to-latest-commit-on-origin)
