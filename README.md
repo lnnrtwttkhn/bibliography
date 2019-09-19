@@ -14,15 +14,33 @@ That way I can sync it with Seafile / Dropbox and provide a direct download link
 The `/papers` contains all `.pdf` files and will not be synced with the repo.
 
 ### `glossary.tex`
+The `glossary.tex` file is also located inside the `/code` folder.
+This file contains an alphabetically sorted list with commonly used abbreviations.
+It can be very easily included in any LaTex manuscript using:
+```latex
+\usepackage{glossaries}
+\loadglsentries{glossary}
+```
+Note that the file extension `.tex` is not used when loading the glossary entries.
 
-
-Note: To use the bibliography as a submodule in `git` via Overleaf requires the repo to be publicly available.
-A workaround is to provide the `.bib`-file as a direct download from a synced website (e.g., Dropbox)
+### `style.sty`
+The `style.sty` script contains some frequently used packages that can be imported at the beginning
+of any LaTex manuscript using, for example:
+```latex
+\documentclass{article}
+\usepackage{style}
+```
+Again, please note that the file extension `.sty` is not used when importing the packages.
 
 ## Usage
 
+### Add repo as a submodule
+
 * Add this repo as a submodule using `git submodule add https://github.com/lnnrtwttkhn/bibliography`
 * Update the submodule using `git submodule foreach git pull origin master`
+
+Note: To use the bibliography as a submodule in `git` via Overleaf requires the repo to be publicly available.
+A workaround is to provide the `.bib`-file as a direct download from a synced website (e.g., Dropbox)
 
 ## Rules
 * The `doi` file never contains `https://` etc.
