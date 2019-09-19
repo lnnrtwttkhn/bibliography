@@ -39,8 +39,10 @@ This project is licensed under the MIT License.
 
 Please see the [LICENSE.md](LICENSE.md) file for details.
 
+## References and acknowledgements
 
-## References
+The following links have helped me to create my own bibliography repo:
+
 * [Context Lab Bibliography](https://github.com/ContextLab/CDL-bibliography)
 * [How to cite an article from arXiv using bibtex](https://tex.stackexchange.com/a/311325)
 * [Software-generated bibliographic entries: common errors and other mistakes to check before use](https://tex.stackexchange.com/questions/386053/software-generated-bibliographic-entries-common-errors-and-other-mistakes-to-ch)
