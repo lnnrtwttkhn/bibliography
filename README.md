@@ -16,6 +16,9 @@ The `/papers` contains all `.pdf` files and will not be synced with the repo.
 ### `glossary.tex`
 
 
+Note: To use the bibliography as a submodule in `git` via Overleaf requires the repo to be publicly available.
+A workaround is to provide the `.bib`-file as a direct download from a synced website (e.g., Dropbox)
+
 
 
 ## Rules
@@ -44,3 +47,4 @@ Please see the [LICENSE.md](LICENSE.md) file for details.
 * [How to remove http://dx.doi.org string from doi field in BibTeX style?](https://tex.stackexchange.com/questions/214393/how-to-remove-http-dx-doi-org-string-from-doi-field-in-bibtex-style)
 * [Creating glossary entries in separate file](https://tex.stackexchange.com/questions/287072/creating-glossary-entries-in-separate-file)
 * [Update Git submodule to latest commit on origin](https://stackoverflow.com/questions/5828324/update-git-submodule-to-latest-commit-on-origin)
+* [Place preamble packages in a different tex file](https://tex.stackexchange.com/questions/339923/place-preamble-packages-in-a-different-tex-file)
