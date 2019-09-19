@@ -6,10 +6,17 @@ This repository contains my entire bibliography.
 
 ## Overview
 
+### `bibliography.bib`
+
 The `bibliography.bib` is inside the `/code` folder.
 That way I can sync it with Seafile / Dropbox and provide a direct download link to Overleaf.
 
 The `/papers` contains all `.pdf` files and will not be synced with the repo.
+
+### `glossary.tex`
+
+
+
 
 ## Rules
 * The `doi` file never contains `https://` etc.
@@ -19,9 +26,9 @@ The `/papers` contains all `.pdf` files and will not be synced with the repo.
 
 If you spot any errors, please [contact Lennart Wittkuhn](mailto:wittkuhn@mpib-berlin.mpg.de)
 
-## Contributors
+## Maintainer
 
-* Lennart Wittkuhn
+* [Lennart Wittkuhn](mailto:wittkuhn@mpib-berlin.mpg.de)
 
 ## License
 
@@ -35,3 +42,4 @@ Please see the [LICENSE.md](LICENSE.md) file for details.
 * [How to cite an article from arXiv using bibtex](https://tex.stackexchange.com/a/311325)
 * [Software-generated bibliographic entries: common errors and other mistakes to check before use](https://tex.stackexchange.com/questions/386053/software-generated-bibliographic-entries-common-errors-and-other-mistakes-to-ch)
 * [How to remove http://dx.doi.org string from doi field in BibTeX style?](https://tex.stackexchange.com/questions/214393/how-to-remove-http-dx-doi-org-string-from-doi-field-in-bibtex-style)
+* [Creating glossary entries in separate file](https://tex.stackexchange.com/questions/287072/creating-glossary-entries-in-separate-file)
