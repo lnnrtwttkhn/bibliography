@@ -74,3 +74,4 @@ The following links have helped me to create my own bibliography repo (thank you
 * [Creating glossary entries in separate file](https://tex.stackexchange.com/questions/287072/creating-glossary-entries-in-separate-file)
 * [Update Git submodule to latest commit on origin](https://stackoverflow.com/questions/5828324/update-git-submodule-to-latest-commit-on-origin)
 * [Place preamble packages in a different tex file](https://tex.stackexchange.com/questions/339923/place-preamble-packages-in-a-different-tex-file)
+* [How to stop `apacite` from displaying the month in references](https://tex.stackexchange.com/questions/65296/apacite-displays-month-in-references)
