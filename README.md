@@ -9,7 +9,9 @@ This repository contains my entire bibliography.
 ### `bibliography.bib`
 
 The `bibliography.bib` is inside the `/code` folder.
-That way I can sync it with Seafile / Dropbox and provide a direct download link to Overleaf.
+That way I can sync the `/code` folder with Seafile / Dropbox and provide a direct download link to Overleaf.
+
+The citation key syntax current used is: `Last name of first author` + `Publication year` + `Journal Abbreviation`. Please note that the journal abbreviations do not follow specific standards but are determined by BibDesk. Also note, that in case the same first author published in the same journal in the same year, a lowercase letter will be included after the publication year to differentiate between the entries in question.
 
 The `/papers` contains all `.pdf` files and will not be synced with the repo.
 
@@ -43,8 +45,9 @@ Note: To use the bibliography as a submodule in `git` via Overleaf requires the 
 A workaround is to provide the `.bib`-file as a direct download from a synced website (e.g., Dropbox)
 
 ## Rules
-* The `doi` file never contains `https://` etc.
-* Don't worry about changing the capitalization of words in the title. LaTex / Overleaf / `apacite` handle this automatically! :clap:
+
+* The `doi` file shall never contain `https://` etc.
+* You shall not worry about changing the capitalization of words in the title. LaTex / Overleaf / the `apacite` package handle this automatically! :clap:
 
 ## Contributing
 
@@ -62,7 +65,7 @@ Please see the [LICENSE.md](LICENSE.md) file for details.
 
 ## References and acknowledgements
 
-The following links have helped me to create my own bibliography repo:
+The following links have helped me to create my own bibliography repo (thank you, internet!):
 
 * [Context Lab Bibliography](https://github.com/ContextLab/CDL-bibliography)
 * [How to cite an article from arXiv using bibtex](https://tex.stackexchange.com/a/311325)
