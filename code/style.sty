@@ -26,7 +26,7 @@
 % change DOIs to hyperlinks:
 \newcommand*{\doi}[1]{\href{http://doi.org/#1}{#1}}
 % stop apacite from showing both year and month in the references:
-\renewcommand{\APACrefYearMonthDay}[3]{\APACrefYear{#1}}
+\AtBeginDocument{\renewcommand{\APACrefYearMonthDay}[3]{\BBOP{#1}\BBCP}}
 % for creating apa-Style tables:
 \usepackage{siunitx,booktabs} 
 % package to include graphics
