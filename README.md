@@ -75,3 +75,4 @@ The following links have helped me to create my own bibliography repo (thank you
 * [Update Git submodule to latest commit on origin](https://stackoverflow.com/questions/5828324/update-git-submodule-to-latest-commit-on-origin)
 * [Place preamble packages in a different tex file](https://tex.stackexchange.com/questions/339923/place-preamble-packages-in-a-different-tex-file)
 * [How to stop `apacite` from displaying the month in references](https://tex.stackexchange.com/questions/500421/bibliography-style-apacite-how-to-suppress-month-and-day-fields)
+* [How to integrate BibDesk with Dropbox - a nice tutorial by Matthew J. Sigal](https://www.matthewsigal.com/post/integrating-bibdesk-with-dropbox.html)
