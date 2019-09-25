@@ -1,12 +1,66 @@
 %% This BibTeX bibliography file was created using BibDesk.
 %% https://bibdesk.sourceforge.io/
 
-%% Created for Wittkuhn, Lennart at 2019-09-25 14:53:59 +0200 
+%% Created for Wittkuhn, Lennart at 2019-09-25 17:34:26 +0200 
 
 
 %% Saved with string encoding Unicode (UTF-8) 
 
 
+
+@article{Cai2019PCB,
+	Abstract = {The activity of neural populations in the brains of humans and animals can exhibit vastly different spatial patterns when faced with different tasks or environmental stimuli. The degrees of similarity between these neural activity patterns in response to different events are used to characterize the representational structure of cognitive states in a neural population. The dominant methods of investigating this similarity structure first estimate neural activity patterns from noisy neural imaging data using linear regression, and then examine the similarity between the estimated patterns. Here, we show that this approach introduces spurious bias structure in the resulting similarity matrix, in particular when applied to fMRI data. This problem is especially severe when the signal-to-noise ratio is low and in cases where experimental conditions cannot be fully randomized in a task. We propose Bayesian Representational Similarity Analysis (BRSA), an alternative method for computing representational similarity, in which we treat the covariance structure of neural activity patterns as a hyper-parameter in a generative model of the neural data. By marginalizing over the unknown activity patterns, we can directly estimate this covariance structure from imaging data. This method offers significant reductions in bias and allows estimation of neural representational similarity with previously unattained levels of precision at low signal-to-noise ratio, without losing the possibility of deriving an interpretable distance measure from the estimated similarity. The method is closely related to Pattern Component Model (PCM), but instead of modeling the estimated neural patterns as in PCM, BRSA models the imaging data directly and is suited for analyzing data in which the order of task conditions is not fully counterbalanced. The probabilistic framework allows for jointly analyzing data from a group of participants. The method can also simultaneously estimate a signal-to-noise ratio map that shows where the learned representational structure is supported more strongly. Both this map and the learned covariance matrix can be used as a structured prior for maximum a posteriori estimation of neural activity patterns, which can be further used for fMRI decoding. Our method therefore paves the way towards a more unified and principled analysis of neural representations underlying fMRI signals. We make our tool freely available in Brain Imaging Analysis Kit (BrainIAK).},
+	Author = {Cai, Ming Bo and Schuck, Nicolas W. and Pillow, Jonathan W. and Niv, Yael},
+	Date-Added = {2019-09-25 17:33:23 +0200},
+	Date-Modified = {2019-09-25 17:34:26 +0200},
+	Doi = {10.1371/journal.pcbi.1006299},
+	Editor = {Jbabdi, SaadEditor},
+	Issn = {1553-7358},
+	Journal = {PLOS Computational Biology},
+	Month = {May},
+	Number = {5},
+	Pages = {e1006299},
+	Publisher = {Public Library of Science (PLoS)},
+	Tags = {highspeed},
+	Title = {{Representational structure or task structure? Bias in neural representational similarity analysis and a Bayesian method for reducing bias}},
+	Url = {http://dx.doi.org/10.1371/journal.pcbi.1006299},
+	Volume = {15},
+	Year = {2019},
+	Bdsk-File-1 = {YnBsaXN0MDDSAQIDBFxyZWxhdGl2ZVBhdGhZYWxpYXNEYXRhXxAYLi4vcGFwZXJzL2NhaTIwMTlwY2IucGRmTxEBnAAAAAABnAACAAAFbWFjT1MAAAAAAAAAAAAAAAAAAAAAAAAAAAAA1el9uEgrAAAB8qXzDmNhaTIwMTlwY2IucGRmAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH9j2PZsVV0AAAAAAAAAAAAAQACAAAJIAAAAAAAAAAAAAAAAAAAAAZwYXBlcnMAEAAIAADV6WGYAAAAEQAIAADZsTlUAAAAAQAUAfKl8wHyoegAG+byABvm5wAGaTIAAgBGbWFjT1M6VXNlcnM6AHdpdHRrdWhuOgBEb2N1bWVudHM6AGJpYmxpb2dyYXBoeToAcGFwZXJzOgBjYWkyMDE5cGNiLnBkZgAOAB4ADgBjAGEAaQAyADAAMQA5AHAAYwBiAC4AcABkAGYADwAMAAUAbQBhAGMATwBTABIAO1VzZXJzL3dpdHRrdWhuL0RvY3VtZW50cy9iaWJsaW9ncmFwaHkvcGFwZXJzL2NhaTIwMTlwY2IucGRmAAATAAEvAAAVAAIAD///AAAACAANABoAJAA/AAAAAAAAAgEAAAAAAAAABQAAAAAAAAAAAAAAAAAAAd8=}}
+
+@article{Wasserstein2019AS,
+	Author = {Wasserstein, Ronald L. and Schirm, Allen L. and Lazar, Nicole A.},
+	Date-Added = {2019-09-25 16:33:31 +0200},
+	Date-Modified = {2019-09-25 16:33:52 +0200},
+	Doi = {10.1080/00031305.2019.1583913},
+	Issn = {1537-2731},
+	Journal = {The American Statistician},
+	Month = {Mar},
+	Number = {sup1},
+	Pages = {1--19},
+	Publisher = {Informa UK Limited},
+	Title = {Moving to a World Beyond {``p < 0.05''}},
+	Url = {http://dx.doi.org/10.1080/00031305.2019.1583913},
+	Volume = {73},
+	Year = {2019},
+	Bdsk-File-1 = {YnBsaXN0MDDSAQIDBFxyZWxhdGl2ZVBhdGhZYWxpYXNEYXRhXxAfLi4vcGFwZXJzL3dhc3NlcnN0ZWluMjAxOWFzLnBkZk8RAbgAAAAAAbgAAgAABW1hY09TAAAAAAAAAAAAAAAAAAAAAAAAAAAAANXpfbhIKwAAAfKl8xV3YXNzZXJzdGVpbjIwMTlhcy5wZGYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/YIB2bFHKwAAAAAAAAAAAAEAAgAACSAAAAAAAAAAAAAAAAAAAAAGcGFwZXJzABAACAAA1elhmAAAABEACAAA2bErCwAAAAEAFAHypfMB8qHoABvm8gAb5ucABmkyAAIATW1hY09TOlVzZXJzOgB3aXR0a3VobjoARG9jdW1lbnRzOgBiaWJsaW9ncmFwaHk6AHBhcGVyczoAd2Fzc2Vyc3RlaW4yMDE5YXMucGRmAAAOACwAFQB3AGEAcwBzAGUAcgBzAHQAZQBpAG4AMgAwADEAOQBhAHMALgBwAGQAZgAPAAwABQBtAGEAYwBPAFMAEgBCVXNlcnMvd2l0dGt1aG4vRG9jdW1lbnRzL2JpYmxpb2dyYXBoeS9wYXBlcnMvd2Fzc2Vyc3RlaW4yMDE5YXMucGRmABMAAS8AABUAAgAP//8AAAAIAA0AGgAkAEYAAAAAAAACAQAAAAAAAAAFAAAAAAAAAAAAAAAAAAACAg==}}
+
+@article{Wasserstein2016AS,
+	Author = {Wasserstein, Ronald L. and Lazar, Nicole A.},
+	Date-Added = {2019-09-25 16:31:03 +0200},
+	Date-Modified = {2019-09-25 16:32:25 +0200},
+	Doi = {10.1080/00031305.2016.1154108},
+	Issn = {1537-2731},
+	Journal = {The American Statistician},
+	Month = {Apr},
+	Number = {2},
+	Pages = {129--133},
+	Publisher = {Informa UK Limited},
+	Title = {The {ASA} Statement on p-Values: Context, Process, and Purpose},
+	Url = {http://dx.doi.org/10.1080/00031305.2016.1154108},
+	Volume = {70},
+	Year = {2016},
+	Bdsk-File-1 = {YnBsaXN0MDDSAQIDBFxyZWxhdGl2ZVBhdGhZYWxpYXNEYXRhXxAfLi4vcGFwZXJzL3dhc3NlcnN0ZWluMjAxNmFzLnBkZk8RAbgAAAAAAbgAAgAABW1hY09TAAAAAAAAAAAAAAAAAAAAAAAAAAAAANXpfbhIKwAAAfKl8xV3YXNzZXJzdGVpbjIwMTZhcy5wZGYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/YDo2bFG1gAAAAAAAAAAAAEAAgAACSAAAAAAAAAAAAAAAAAAAAAGcGFwZXJzABAACAAA1elhmAAAABEACAAA2bEqtgAAAAEAFAHypfMB8qHoABvm8gAb5ucABmkyAAIATW1hY09TOlVzZXJzOgB3aXR0a3VobjoARG9jdW1lbnRzOgBiaWJsaW9ncmFwaHk6AHBhcGVyczoAd2Fzc2Vyc3RlaW4yMDE2YXMucGRmAAAOACwAFQB3AGEAcwBzAGUAcgBzAHQAZQBpAG4AMgAwADEANgBhAHMALgBwAGQAZgAPAAwABQBtAGEAYwBPAFMAEgBCVXNlcnMvd2l0dGt1aG4vRG9jdW1lbnRzL2JpYmxpb2dyYXBoeS9wYXBlcnMvd2Fzc2Vyc3RlaW4yMDE2YXMucGRmABMAAS8AABUAAgAP//8AAAAIAA0AGgAkAEYAAAAAAAACAQAAAAAAAAAFAAAAAAAAAAAAAAAAAAACAg==}}
 
 @misc{R2019,
 	Address = {Vienna, Austria},
