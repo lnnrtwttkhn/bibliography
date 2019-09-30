@@ -42,7 +42,9 @@ Again, please note that the file extension `.sty` is not used when importing the
 * Update the submodule using `git submodule foreach git pull origin master`
 
 Note: To use the bibliography as a submodule in `git` via Overleaf requires the repo to be publicly available.
-A workaround is to provide the `.bib`-file as a direct download from a synced website (e.g., Dropbox)
+A workaround is to provide the `.bib`-file as a direct download from a website that synchronized the repo contents (e.g., Dropbox or Seafile).
+
+### Add `code` folder contents as a direct download
 
 ## Rules
 
@@ -78,3 +80,4 @@ The following links have helped me to create my own bibliography repo (thank you
 * [How to integrate BibDesk with Dropbox - a nice tutorial by Matthew J. Sigal](https://www.matthewsigal.com/post/integrating-bibdesk-with-dropbox.html)
 * [How to get rid of `Not defining \perthousand` and `Not defining \micro` warnings](https://tex.stackexchange.com/questions/165115/getting-not-defining-perthousnad-and-not-defining-micro-when-compiling-beamer)
 * [How to cite a reference in a figure caption in LaTeX](https://tex.stackexchange.com/questions/227833/cite-references-in-figure-caption)
+* [How to not mess up your bibliographies with BibTex - guide by Claus Wilke](https://serialmentor.com/blog/2015/10/2/Bibtex)
