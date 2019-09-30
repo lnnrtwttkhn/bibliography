@@ -67,13 +67,13 @@ Please see the [LICENSE.md](LICENSE.md) file for details.
 
 The following links have helped me to create my own bibliography repo (thank you, internet!):
 
-* [Context Lab Bibliography](https://github.com/ContextLab/CDL-bibliography)
+* [How the Context Lab at Dartmouth College manage their bibliography](https://github.com/ContextLab/CDL-bibliography)
 * [How to cite an article from arXiv using bibtex](https://tex.stackexchange.com/a/311325)
-* [Software-generated bibliographic entries: common errors and other mistakes to check before use](https://tex.stackexchange.com/questions/386053/software-generated-bibliographic-entries-common-errors-and-other-mistakes-to-ch)
-* [How to remove http://dx.doi.org string from doi field in BibTeX style?](https://tex.stackexchange.com/questions/214393/how-to-remove-http-dx-doi-org-string-from-doi-field-in-bibtex-style)
-* [Creating glossary entries in separate file](https://tex.stackexchange.com/questions/287072/creating-glossary-entries-in-separate-file)
-* [Update Git submodule to latest commit on origin](https://stackoverflow.com/questions/5828324/update-git-submodule-to-latest-commit-on-origin)
-* [Place preamble packages in a different tex file](https://tex.stackexchange.com/questions/339923/place-preamble-packages-in-a-different-tex-file)
+* [How to check for common errors and other mistakes before using software-generated bibliographic entries](https://tex.stackexchange.com/questions/386053/software-generated-bibliographic-entries-common-errors-and-other-mistakes-to-ch)
+* [How to remove the `http://dx.doi.org` string from the `doi` field in BibTeX files](https://tex.stackexchange.com/questions/214393/how-to-remove-http-dx-doi-org-string-from-doi-field-in-bibtex-style)
+* [How to use glossary entries from a separate file](https://tex.stackexchange.com/questions/287072/creating-glossary-entries-in-separate-file)
+* [How to update `git` submodule to the latest commit on the origin](https://stackoverflow.com/questions/5828324/update-git-submodule-to-latest-commit-on-origin)
+* [How to place preamble packages in a different `.tex` file](https://tex.stackexchange.com/questions/339923/place-preamble-packages-in-a-different-tex-file)
 * [How to stop `apacite` from displaying the month in references](https://tex.stackexchange.com/questions/500421/bibliography-style-apacite-how-to-suppress-month-and-day-fields)
 * [How to integrate BibDesk with Dropbox - a nice tutorial by Matthew J. Sigal](https://www.matthewsigal.com/post/integrating-bibdesk-with-dropbox.html)
 * [How to get rid of `Not defining \perthousand` and `Not defining \micro` warnings](https://tex.stackexchange.com/questions/165115/getting-not-defining-perthousnad-and-not-defining-micro-when-compiling-beamer)
