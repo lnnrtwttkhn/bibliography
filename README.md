@@ -53,7 +53,7 @@ A workaround is to provide the `.bib`-file as a direct download from a website t
 
 ## Contributing
 
-If you spot any errors, please [contact Lennart Wittkuhn](mailto:wittkuhn@mpib-berlin.mpg.de)
+If you have any suggestions for improvement, please [contact Lennart Wittkuhn](mailto:wittkuhn@mpib-berlin.mpg.de) or create a new issue on the issue board.
 
 ## Maintainer
 
@@ -62,14 +62,13 @@ If you spot any errors, please [contact Lennart Wittkuhn](mailto:wittkuhn@mpib-b
 ## License
 
 This project is licensed under the MIT License.
-
 Please see the [LICENSE.md](LICENSE.md) file for details.
 
 ## References and acknowledgements
 
 The following links have helped me to create my own bibliography repo (thank you, internet!):
 
-* [How the Context Lab at Dartmouth College manage their bibliography](https://github.com/ContextLab/CDL-bibliography)
+* [How to manage a bibliography like the Context Lab at Dartmouth College, USA](https://github.com/ContextLab/CDL-bibliography)
 * [How to cite an article from arXiv using bibtex](https://tex.stackexchange.com/a/311325)
 * [How to check for common errors and other mistakes before using software-generated bibliographic entries](https://tex.stackexchange.com/questions/386053/software-generated-bibliographic-entries-common-errors-and-other-mistakes-to-ch)
 * [How to remove the `http://dx.doi.org` string from the `doi` field in BibTeX files](https://tex.stackexchange.com/questions/214393/how-to-remove-http-dx-doi-org-string-from-doi-field-in-bibtex-style)
@@ -81,3 +80,4 @@ The following links have helped me to create my own bibliography repo (thank you
 * [How to get rid of `Not defining \perthousand` and `Not defining \micro` warnings](https://tex.stackexchange.com/questions/165115/getting-not-defining-perthousnad-and-not-defining-micro-when-compiling-beamer)
 * [How to cite a reference in a figure caption in LaTeX](https://tex.stackexchange.com/questions/227833/cite-references-in-figure-caption)
 * [How to not mess up your bibliographies with BibTex - guide by Claus Wilke](https://serialmentor.com/blog/2015/10/2/Bibtex)
+* [How to set up BibDesk with a version control system - blog post by Terrel Russel](https://weblog.terrellrussell.com/2007/02/bibdesk-bibtex-and-subversion-an-academics-necessity/)
