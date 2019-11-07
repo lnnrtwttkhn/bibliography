@@ -83,3 +83,4 @@ The following links have helped me to create my own bibliography repo (thank you
 * [How to set up BibDesk with a version control system - blog post by Terrel Russel](https://weblog.terrellrussell.com/2007/02/bibdesk-bibtex-and-subversion-an-academics-necessity/)
 * [How to use a bibliography in LaTeX with version control - discussion on Stackexchange](https://tex.stackexchange.com/questions/297075/latex-git-bibliography)
 * [How to keep a master .bib-file with version control - tutorial by Andrius Vylikis](http://andrius.velykis.lt/2012/06/master-bibtex-file-git-submodules/)
+* [BibTex Useful Hints](https://www.openoffice.org/bibliographic/bibtex-defs.html)
