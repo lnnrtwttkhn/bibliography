@@ -1,6 +1,6 @@
-SCRIPT=~/tools/BibLatex-Check/biblatex_check.py
-INPUT=~/Documents/bibliography/code/bibliography.bib
-OUTPUT=~/Desktop/test2.html
-. $SCRIPT -b $INPUT -o $OUTPUT 
-
+SCRIPT=$HOME/tools/BibLatex-Check/biblatex_check.py
+INPUT="$HOME/Documents/bibliography/code/bibliography.bib"
+OUTPUT="$HOME/Desktop/bibliography_overview.html"
+$SCRIPT --bib $INPUT --output $OUTPUT --view 
+open $OUTPUT
 
