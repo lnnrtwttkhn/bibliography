@@ -13,7 +13,7 @@ That way I can sync the `/code` folder with Seafile / Dropbox and provide a dire
 
 The citation key syntax current used is: `Last name of first author` + `Publication year` + `Journal Abbreviation`. Please note that the journal abbreviations do not follow specific standards but are determined by BibDesk. Also note, that in case the same first author published in the same journal in the same year, a lowercase letter will be included after the publication year to differentiate between the entries in question.
 
-The `/papers` contains all `.pdf` files and will not be synced with the repo.
+The `/papers` folder contains all `.pdf` files and will not be synced with the repo.
 
 ### `glossary.tex`
 The `glossary.tex` file is also located inside the `/code` folder.
@@ -40,6 +40,7 @@ Again, please note that the file extension `.sty` is not used when importing the
 
 * Add this repo as a submodule using `git submodule add https://github.com/lnnrtwttkhn/bibliography`
 * Update the submodule using `git submodule foreach git pull origin master`
+* Add `\bibliography{bibliography/code/bibliography.bib}` to your LaTex document 
 
 Note: To use the bibliography as a submodule in `git` via Overleaf requires the repo to be publicly available.
 A workaround is to provide the `.bib`-file as a direct download from a website that synchronized the repo contents (e.g., Dropbox or Seafile).
