@@ -85,3 +85,5 @@ The following links have helped me to create my own bibliography repo (thank you
 * [How to use a bibliography in LaTeX with version control - discussion on Stackexchange](https://tex.stackexchange.com/questions/297075/latex-git-bibliography)
 * [How to keep a master .bib-file with version control - tutorial by Andrius Vylikis](http://andrius.velykis.lt/2012/06/master-bibtex-file-git-submodules/)
 * [BibTex Useful Hints](https://www.openoffice.org/bibliographic/bibtex-defs.html)
+* [How to clear the Overleaf cache if you have trouble with references](https://de.overleaf.com/learn/how-to/Clearing_the_cache)
+* [How to cite a range o papers using numeric keys as in /cite{a, b, c} :arrow_right: [1-3]](https://tex.stackexchange.com/questions/3871/citing-a-range-of-papers-using-numeric-keys-as-in-citea-b-c-1-3)
