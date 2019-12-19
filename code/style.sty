@@ -46,3 +46,12 @@
 \usepackage{float}
 % highly recommended as an adjunct to serious mathematical typesetting:
 \usepackage{amsmath}
+% create a new command for supplements
+\newcommand{\beginsupplement}{%
+		\clearpage
+		\pagenumbering{arabic}
+		\setcounter{table}{0}
+		\renewcommand{\thetable}{S\arabic{table}}%
+		\setcounter{figure}{0}
+		\renewcommand{\thefigure}{S\arabic{figure}}%
+	}
