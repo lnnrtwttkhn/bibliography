@@ -3,7 +3,8 @@
 \usepackage{etoolbox}
 \usepackage{hyperref}
 % change DOIs to hyperlinks:
-\newcommand*{\doi}[1]{\href{http://doi.org/#1}{#1}}
+% modified to deal with special characters (https://tex.stackexchange.com/questions/3802/how-to-get-doi-links-in-bibliography/19734#19734)
+\newcommand*{\doi}[1]{\href{https://doi.org/\detokenize{#1}}{doi: \detokenize{#1}}}
 % remove URLs from bibliography:
 \renewenvironment{APACrefURL}[1][]{}{}
 \AtBeginEnvironment{APACrefURL}{\renewcommand{\url}[1]{}}
