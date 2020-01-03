@@ -71,6 +71,8 @@ The following links have helped me to create my own bibliography repo (thank you
 
 * [How to manage a bibliography like the Context Lab at Dartmouth College, USA](https://github.com/ContextLab/CDL-bibliography)
 * [How to cite an article from arXiv using bibtex](https://tex.stackexchange.com/a/311325)
+* [How to have DOI hyperlinks in the bibliography](https://tex.stackexchange.com/questions/3802/how-to-get-doi-links-in-bibliography)
+* [How to make sure that these hyperlinks can deal with DOIs with special characters](https://tex.stackexchange.com/a/19734)
 * [How to check for common errors and other mistakes before using software-generated bibliographic entries](https://tex.stackexchange.com/questions/386053/software-generated-bibliographic-entries-common-errors-and-other-mistakes-to-ch)
 * [How to remove the `http://dx.doi.org` string from the `doi` field in BibTeX files](https://tex.stackexchange.com/questions/214393/how-to-remove-http-dx-doi-org-string-from-doi-field-in-bibtex-style)
 * [How to use glossary entries from a separate file](https://tex.stackexchange.com/questions/287072/creating-glossary-entries-in-separate-file)
