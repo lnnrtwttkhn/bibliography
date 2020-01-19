@@ -34,6 +34,13 @@ of any LaTex manuscript using, for example:
 ```
 Again, please note that the file extension `.sty` is not used when importing the packages.
 
+## Requirements
+
+The software below is not a strict requirment but merely a list of tools I use to manage my bibliography. This is just to help the interested reader with the software choice and acknowledge the tools that make this bibliography management possible.
+
+* A good text editor, e.g., Sublime Text
+* BibDesk Version 1.7.4 (5123)
+
 ## Usage
 
 ### Add repo as a submodule
