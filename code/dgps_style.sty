@@ -1,0 +1,34 @@
+% change data format to German convention:
+\usepackage[ddmmyyyy]{datetime}
+\renewcommand{\dateseparator}{.}
+
+% change font to helvetica
+\usepackage{helvet}
+
+% change color of section headings
+\usepackage{titlesec}
+\titleformat*{\section}{\normalsize\bfseries\color{blue}}
+\titleformat*{\subsection}{\normalsize\bfseries\color{blue}}
+\titleformat*{\subsubsection}{\normalsize\bfseries\color{blue}}
+\titleformat*{\paragraph}{\normalsize\bfseries\color{blue}}
+\titleformat*{\subparagraph}{\normalsize\bfseries\color{blue}}
+
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+% set header height to deal with warning "Package Fancyhdr Warning: \headheight is too small":
+\setlength{\headheight}{20pt}
+
+\fancyhf{}
+\rhead{Seite \thepage\ von \pageref{LastPage}}
+
+% create yes and no boxes
+\usepackage{amssymb}
+\newcommand{\YesNo}{$\square$ ja \quad\quad $\square$ nein \quad\quad \textit{(bitte Zutreffendes ankreuzen)}}
+
+% remove indentation for new paragraphs:
+\usepackage[parfill]{parskip}
+
+\title{\vspace{-1cm}Antrag auf Stellungnahme der Ethikkommission der DGPs\vspace{-1.5cm}}
+\author{}
+\date{}
