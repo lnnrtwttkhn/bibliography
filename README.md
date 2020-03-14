@@ -2,7 +2,7 @@
 
 ## Description
 
-This repository contains my entire bibliography.
+This repository contains my entire bibliography in a `.bib` file and several `.sty` files that I use to customize my LaTeX manuscripts. The bibliography mostly spans publications in cognitive and computational neuroscience, psychology and statistics.
 
 ## Overview
 
@@ -11,34 +11,40 @@ This repository contains my entire bibliography.
 The `bibliography.bib` is inside the `/code` folder.
 That way I can sync the `/code` folder with Seafile / Dropbox and provide a direct download link to Overleaf.
 
-The citation key syntax current used is: `Last name of first author` + `Publication year` + `Journal Abbreviation`. Please note that the journal abbreviations do not follow specific standards but are determined by BibDesk. Also note, that in case the same first author published in the same journal in the same year, a lowercase letter will be included after the publication year to differentiate between the entries in question.
+The citation key syntax currently used is: `Last name of first author` + `Publication year` + `Journal Abbreviation`. Please note that the journal abbreviations do not follow specific standards but are determined by BibDesk. Also note, that in case the same first author published in the same journal in the same year, a lowercase letter will be included after the publication year to differentiate between the entries in question. This setup works quite nicely so far as in the research fields that I mostly follow, the same first author rarely published in the same journal in the same year. An exception from this are usually preprints (e.g., on bioRxiv) where the same first authors *do* publish more than once per year.
 
-The `/papers` folder contains all `.pdf` files and will not be synced with the repo.
+The `/papers` folder contains all `.pdf` files and will not be synced with the repo. As a further enhancement I am looking into ways how to version-control and synchronize the `.pdf` files with the repo / a cloud sharing service to be able to access them across devices. There is a [corresponding open issue](https://github.com/lnnrtwttkhn/bibliography/issues/5) and help / ideas are very welcome! Thanks!
 
 ### `glossary.tex`
-The `glossary.tex` file is also located inside the `/code` folder.
-This file contains an alphabetically sorted list with commonly used abbreviations.
+
+The `glossary.tex` file contains an alphabetically sorted list with commonly used abbreviations.
+It is also located inside the `/code` folder.
 It can be very easily included in any LaTex manuscript using:
+
 ```latex
 \usepackage{glossaries}
 \loadglsentries{glossary}
 ```
+
 Note that the file extension `.tex` is not used when loading the glossary entries.
 
 ### `style.sty`
-The `style.sty` script contains some frequently used packages that can be imported at the beginning
+
+The `style.sty` file contains some frequently used LaTeX packages that can be imported at the beginning
 of any LaTex manuscript using, for example:
+
 ```latex
 \documentclass{article}
 \usepackage{style}
 ```
+
 Again, please note that the file extension `.sty` is not used when importing the packages.
 
 ## Requirements
 
 The software below is not a strict requirment but merely a list of tools I use to manage my bibliography. This is just to help the interested reader with the software choice and acknowledge the tools that make this bibliography management possible.
 
-* A good text editor, e.g., Sublime Text
+* A good text editor of your choice (I use Atom)
 * BibDesk Version 1.7.4 (5123)
 
 ## Usage
@@ -47,12 +53,20 @@ The software below is not a strict requirment but merely a list of tools I use t
 
 * Add this repo as a submodule using `git submodule add https://github.com/lnnrtwttkhn/bibliography`
 * Update the submodule using `git submodule foreach git pull origin master`
-* Add `\bibliography{bibliography/code/bibliography.bib}` to your LaTex document 
+* To only use the `bibliography.tex` file, add `\bibliography{bibliography/code/bibliography.bib}` to your LaTeX document
 
 Note: To use the bibliography as a submodule in `git` via Overleaf requires the repo to be publicly available.
 A workaround is to provide the `.bib`-file as a direct download from a website that synchronized the repo contents (e.g., Dropbox or Seafile).
+Read the next section for further instructions.
 
-### Add `code` folder contents as a direct download
+### Add `/code` folder contents as a direct download in Overleaf
+
+If you can't or don't want to add the repo as a submodule to your manuscript repo, you can also sync the files with a cloud storage system (like Dropbox or Seafile) and provide it as a direct download in Overleaf. Here is how I do it:
+
+* I sync the `/code` directory with a cloud storage provider (I use Seafile)
+* In Seafile, I can create a direct download link for a specific file (e.g., the `bibliography.bib` file)
+* In Overleaf, I can select `Upload` and add files `From External URL`
+* Here, I paste the direct download link as the `URL to fetch the file from` and set the `File Name in this Project` to be the same link in the repo
 
 ## Rules
 
@@ -61,11 +75,11 @@ A workaround is to provide the `.bib`-file as a direct download from a website t
 
 ## Contributing
 
-If you have any suggestions for improvement, please [contact Lennart Wittkuhn](mailto:wittkuhn@mpib-berlin.mpg.de) or create a new issue on the issue board.
+If you have any suggestions for improvement, please [contact Lennart Wittkuhn](mailto:wittkuhn@mpib-berlin.mpg.de) or [create a new issue on the issue board](https://github.com/lnnrtwttkhn/bibliography/issues).
 
 ## Maintainer
 
-* [Lennart Wittkuhn](mailto:wittkuhn@mpib-berlin.mpg.de)
+* [Lennart Wittkuhn](mailto:wittkuhn@mpib-berlin.mpg.de), Max Planck Institute for Human Development, Berlin, Germany
 
 ## License
 
@@ -95,7 +109,7 @@ The following links have helped me to create my own bibliography repo (thank you
 * [How to keep a master .bib-file with version control - tutorial by Andrius Vylikis](http://andrius.velykis.lt/2012/06/master-bibtex-file-git-submodules/)
 * [BibTex Useful Hints](https://www.openoffice.org/bibliographic/bibtex-defs.html)
 * [How to clear the Overleaf cache if you have trouble with references](https://de.overleaf.com/learn/how-to/Clearing_the_cache)
-* [How to cite a range o papers using numeric keys as in /cite{a, b, c} :arrow_right: [1-3]](https://tex.stackexchange.com/questions/3871/citing-a-range-of-papers-using-numeric-keys-as-in-citea-b-c-1-3)
+* [How to cite a range of papers using numeric keys so that /cite{a, b, c} becomes [1-3]](https://tex.stackexchange.com/questions/3871/citing-a-range-of-papers-using-numeric-keys-as-in-citea-b-c-1-3)
 * [How does one indicate the corresponding author when using the authblk package?](https://tex.stackexchange.com/questions/309819/how-does-one-indicate-the-corresponding-author-when-using-the-authblk-package)
 * [How to easily convert a `doi` into a `bib` entry using `doi2bib.org`](https://www.doi2bib.org/)
 * [How to reset line numbers after every chapter in LaTex](https://tex.stackexchange.com/questions/435418/restart-line-numbers-after-every-chapter)
