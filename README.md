@@ -112,4 +112,6 @@ The following links have helped me to create my own bibliography repo (thank you
 * [How to cite a range of papers using numeric keys so that /cite{a, b, c} becomes [1-3]](https://tex.stackexchange.com/questions/3871/citing-a-range-of-papers-using-numeric-keys-as-in-citea-b-c-1-3)
 * [How does one indicate the corresponding author when using the authblk package?](https://tex.stackexchange.com/questions/309819/how-does-one-indicate-the-corresponding-author-when-using-the-authblk-package)
 * [How to easily convert a `doi` into a `bib` entry using `doi2bib.org`](https://www.doi2bib.org/)
-* [How to reset line numbers after every chapter in LaTex](https://tex.stackexchange.com/questions/435418/restart-line-numbers-after-every-chapter)
+* [How to reset line numbers after every chapter in LaTeX](https://tex.stackexchange.com/questions/435418/restart-line-numbers-after-every-chapter)
+* [How to show differences in lines of LaTex with git](https://twitter.com/russpoldrack/status/1209481756497383426?s=20)
+* [How to make your git + LaTeX workflow more efficient](https://stackoverflow.com/a/6190412)
