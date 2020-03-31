@@ -27,3 +27,5 @@ papers
 *.out
 *.synctex.gz
 *.xdy
+*.fdb_latexmk
+*.fls
