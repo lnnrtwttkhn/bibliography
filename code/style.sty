@@ -33,7 +33,7 @@
 % with the International Standard ISO 80000-2
 \usepackage{isomath}
 % This command prevents hyperref from referencing the first time an acronym is used:
-\renewcommand*{\glslinkcheckfirsthyperhook}{\ifglsused{\glslabel}{}{\ifglshaslong{\glslabel}{\setkeys{glslink}{hyper=false}}{}}} 
+\renewcommand*{\glslinkcheckfirsthyperhook}{\ifglsused{\glslabel}{}{\ifglshaslong{\glslabel}{\setkeys{glslink}{hyper=false}}{}}}
 % This command turns all hyperrefs of acronyms to black:
 \renewcommand*{\glstextformat}[1]{\textcolor{black}{#1}}
 % define new macro in order to be able to include keywords
@@ -45,6 +45,8 @@
 \usepackage{float}
 % highly recommended as an adjunct to serious mathematical typesetting:
 \usepackage{amsmath}
+% load packages for timeline:
+\usepackage{array, booktabs}
 % create a new command for supplements
 \newcommand{\beginsupplement}{
 		\clearpage
