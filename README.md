@@ -115,3 +115,5 @@ The following links have helped me to create my own bibliography repo (thank you
 * [How to reset line numbers after every chapter in LaTeX](https://tex.stackexchange.com/questions/435418/restart-line-numbers-after-every-chapter)
 * [How to show differences in lines of LaTex with git](https://twitter.com/russpoldrack/status/1209481756497383426?s=20)
 * [How to make your git + LaTeX workflow more efficient](https://stackoverflow.com/a/6190412)
+* ["Academics should ditch Elsevier and Mendeley — here’s how" - article by Steve Chignell on medium.com](https://medium.com/the-nature-of-food/academics-should-ditch-elsevier-and-mendeley-heres-how-153f1a8bf5f4)
+* ["Why you should not use Mendeley as a reference manager" - article on medium.com](https://medium.com/@gagarine/3-reasons-you-shouldn-t-use-mendeley-8f00d609bd12)
