@@ -1,7 +1,6 @@
 # pdfs etc.
 papers
 *.pdf
-
 # latex auxiliary files:
 *.aux
 *.glo
@@ -29,3 +28,5 @@ papers
 *.xdy
 *.fdb_latexmk
 *.fls
+# code output
+index.html

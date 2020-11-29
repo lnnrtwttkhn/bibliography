@@ -42,10 +42,20 @@ Again, please note that the file extension `.sty` is not used when importing the
 
 ## Requirements
 
-The software below is not a strict requirment but merely a list of tools I use to manage my bibliography. This is just to help the interested reader with the software choice and acknowledge the tools that make this bibliography management possible.
+The software below is not a strict requirement but merely a list of tools I use to manage my bibliography.
+This is just to help the interested reader with the software choice and acknowledge the tools that make this bibliography management possible.
 
 * A good text editor of your choice (I use Atom)
-* BibDesk Version 1.7.4 (5123)
+* BibDesk Version 1.7.9 (5416)
+
+```bash
+$ python3 --version
+Python 3.8.6
+```
+
+### Run Python code
+
+To run the Python code in the `/code` directory, please install the required packages in [`requirements.txt`](requirements.txt) using `pip install -r requirements.txt`.
 
 ## Usage
 
@@ -117,3 +127,4 @@ The following links have helped me to create my own bibliography repo (thank you
 * [How to make your git + LaTeX workflow more efficient](https://stackoverflow.com/a/6190412)
 * ["Academics should ditch Elsevier and Mendeley — here’s how" - article by Steve Chignell on medium.com](https://medium.com/the-nature-of-food/academics-should-ditch-elsevier-and-mendeley-heres-how-153f1a8bf5f4)
 * ["Why you should not use Mendeley as a reference manager" - article on medium.com](https://medium.com/@gagarine/3-reasons-you-shouldn-t-use-mendeley-8f00d609bd12)
+* [Pandas dataframe to HTML using `pd.to_html()`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_html.html)
