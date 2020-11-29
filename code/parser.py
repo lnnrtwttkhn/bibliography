@@ -10,6 +10,8 @@ path_root = list(set(path_root))
 assert len(path_root) == 1
 path_root = path_root[0]
 path_code = os.path.join(path_root, 'code')
+if not os.path.exists(os.path.join(path_root, 'public')):
+    os.makedirs(os.path.join(path_root, 'public'))
 with open(os.path.join(path_code, 'bibliography.bib')) as bibtex_file:
     bib_database = bibtexparser.bparser.BibTexParser(common_strings=True).parse_file(bibtex_file)
 df = pd.DataFrame(bib_database.entries)
@@ -19,7 +21,7 @@ html = df.to_html(
         render_links=True, index_names=False, bold_rows=False,
         index=False)
 html_name = "index.html"
-html_path = os.path.join(path_root, html_name)
+html_path = os.path.join(path_root, 'public', html_name)
 with open(html_path, "w") as html_file:
     html_file.write(html)
 print('Created {} successfully!'.format(html_name))

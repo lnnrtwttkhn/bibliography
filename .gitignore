@@ -30,3 +30,4 @@ papers
 *.fls
 # code output
 index.html
+public
