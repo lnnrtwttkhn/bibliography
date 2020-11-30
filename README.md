@@ -4,7 +4,10 @@
 
 ## Description
 
-This repository contains my entire bibliography in a `.bib` file and several `.sty` files that I use to customize my LaTeX manuscripts. The bibliography mostly spans publications in cognitive and computational neuroscience, psychology and statistics.
+This repository contains my entire bibliography in a `.bib` file and several `.sty` files that I use to customize my LaTeX manuscripts.
+The bibliography mostly spans publications in cognitive and computational neuroscience, psychology and statistics.
+
+A (very basic) table of all publications in the `bibliography.bib` file can be reviewed at https://lennartwittkuhn.com/bibliography/ (sorted by last name of first author, then year of publication).
 
 ## Overview
 
