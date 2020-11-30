@@ -1,0 +1,43 @@
+---
+title: "Bibliography"
+author: "Lennart Wittkuhn"
+date: "Last update: `r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    toc: yes
+    self_contained: true
+    toc_float: true
+    toc_depth: 3
+    number_sections: true
+    highlight: pygments
+    theme: cosmo
+    code_folding: "show"
+    df_print: paged
+    fig_caption: true
+fig.align: "center"
+email: wittkuhn@mpib-berlin.mpg.de
+---
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+if (!requireNamespace("pacman")) install.packages("pacman")
+packages_cran <- c("here", "data.table", "DT", "tidyverse")
+pacman::p_load(char = packages_cran)
+path_bib <- here::here("public", "bibliography.csv")
+bib <- data.table::fread(path_bib) %>%
+  select(-"author")
+```
+
+# Bibliography
+
+```{r, echo=FALSE}
+DT::datatable(bib, class = "cell-border stripe", rownames = FALSE,
+              options = list(scrollX = TRUE)) 
+```
+
+# Packages
+
+```{r, echo=FALSE}
+sessionInfo()
+```
+
+

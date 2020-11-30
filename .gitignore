@@ -29,5 +29,6 @@ papers
 *.fdb_latexmk
 *.fls
 # code output
-index.html
+*.html
 public
+.Rproj.user
