@@ -7,7 +7,6 @@ install:
 script:
   - python3 code/parser.py
 
-# Here is the magic part
 deploy:
   # Use Github pages deploy process
   provider: pages
