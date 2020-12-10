@@ -1,12 +1,12 @@
-dist: xenial
+dist: trusty
 language: r
 sudo: true
+latex: false
 before_install:
   - sudo apt-get update
   - sudo apt-get install -y python3.8
 install:
   - pip install --user -r requirements.txt
-# command to run tests
 script:
   - make
 cache: packages
