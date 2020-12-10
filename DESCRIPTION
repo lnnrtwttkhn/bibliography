@@ -1,0 +1,6 @@
+Package: bibliography
+Title: bibliography
+Version: 0.0.1
+Imports: pacman, here, data.table, DT, tidyverse
+License: MIT
+Remotes: lnnrtwttkhn/bibliography
