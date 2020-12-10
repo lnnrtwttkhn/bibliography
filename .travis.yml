@@ -4,7 +4,9 @@ before_install:
   - sudo apt-get update
   - sudo apt-get install -y python3
 install:
-  - pip install -r requirements.txt
+  - pip install --upgrade pip
+  - pip install bibtexparser
+  - pip install pandas
 # command to run tests
 script:
   - make
