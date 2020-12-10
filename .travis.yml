@@ -1,7 +1,9 @@
 language: r
 sudo: true
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install -y python3
 install:
-  - sudo apt-get install -y python3.7
   - pip install -r requirements.txt
 # command to run tests
 script:
