@@ -1,23 +1,14 @@
-dist: trusty
-language: r
-sudo: true
-latex: false
+language: python
+python:
+  - "3.8"
 before_install:
-  - sudo apt-get update
-  - sudo apt-get install -y python3.8
+  - sudo apt-get install -y r-base:4.0.3
+  - sudo apt-get install -y r-cran-data.table r-cran-tidyverse
 install:
   - pip install --user -r requirements.txt
+  - Rscript -e "installOrQuit(c('pacman', 'here', 'DT'))"
 script:
   - make
-cache: packages
-r_packages:
-  - pacman
-  - here
-  - data.table
-  - DT
-  - tidyverse
-os:
-  - linux
 deploy:
   # Use Github pages deploy process
   provider: pages
