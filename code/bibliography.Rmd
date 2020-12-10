@@ -23,15 +23,23 @@ if (!requireNamespace("pacman")) install.packages("pacman")
 packages_cran <- c("here", "data.table", "DT", "tidyverse")
 pacman::p_load(char = packages_cran)
 path_bib <- here::here("public", "bibliography.csv")
+```
+
+```{r, echo=FALSE}
 bib <- data.table::fread(path_bib) %>%
-  select(-"author")
+  # turn URLs into hyperlinks that open in a new tap:
+  transform(url = paste0("<a href='", url , "' target='_blank'>URL</a>")) %>%
+  # remove curly brackets from the title:
+  transform(title = gsub("[{}]", "", title))
 ```
 
 # Bibliography
 
-```{r, echo=FALSE}
-DT::datatable(bib, class = "cell-border stripe", rownames = FALSE,
-              options = list(scrollX = TRUE)) 
+```{r}
+DT::datatable(
+  bib, class = "cell-border stripe", rownames = FALSE,
+  options = list(scrollX = TRUE), escape = FALSE,
+  ) 
 ```
 
 # Packages
