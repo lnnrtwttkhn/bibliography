@@ -1,11 +1,11 @@
+dist: xenial
 language: r
 sudo: true
 before_install:
   - sudo apt-get update
-  - sudo apt-get install -y python3
+  - sudo apt-get install -y python3.8
 install:
-  - pip install bibtexparser
-  - pip install pandas
+  - pip install --user -r requirements.txt
 # command to run tests
 script:
   - make
