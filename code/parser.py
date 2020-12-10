@@ -23,8 +23,8 @@ html = df.to_html(
 csv_name = "bibliography.csv"
 csv_path = os.path.join(path_root, 'public', csv_name)
 df.to_csv(csv_path, index=False)
-html_name = "index.html"
-html_path = os.path.join(path_root, 'public', html_name)
-with open(html_path, "w") as html_file:
-    html_file.write(html)
-print('Created {} successfully!'.format(html_name))
+#html_name = "index.html"
+#html_path = os.path.join(path_root, 'public', html_name)
+#with open(html_path, "w") as html_file:
+#    html_file.write(html)
+#print('Created {} successfully!'.format(html_name))
