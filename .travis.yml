@@ -1,15 +1,19 @@
-language: python
-python:
-  - "3.8"
+dist: xenial
+language: r
+sudo: true
 before_install:
-  - sudo apt-get update
-  - sudo apt-get install -y r-base
-  - sudo apt-get install -y r-cran-data.table r-cran-tidyverse
-install:
-  - pip install --user -r requirements.txt
-  - Rscript -e "installOrQuit(c('pacman', 'here', 'DT'))"
+  - sudo apt-get install python3 python3-pip python3-pandas
+  - pip3 install bibtexparser
+# command to run tests
 script:
   - make
+cache: packages
+r_packages:
+  - pacman
+  - here
+  - data.table
+  - DT
+  - tidyverse
 deploy:
   # Use Github pages deploy process
   provider: pages
