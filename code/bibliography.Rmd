@@ -8,7 +8,7 @@ output:
     self_contained: true
     toc_float: true
     toc_depth: 3
-    number_sections: true
+    number_sections: false
     highlight: pygments
     theme: cosmo
     code_folding: "hide"
@@ -35,6 +35,24 @@ bib <- data.table::fread(path_bib) %>%
 
 # Bibliography
 
+## Overview
+
+Welcome! This website show the entire bibliography maintained by Lennart Wittkuhn.
+
+At the moment, this bibliography contains `r nrow(bib)` references for publications in cognitive and computational neuroscience, psychology, statistics, meta-science and more.
+
+## Usage
+
+The table below lists all references sorted by the first author's last name, publication year, and journal name (in that order).
+
+You can use the `Search` bar on the right to search for certain publications (e.g., by author or journal name).
+
+The `URL` column contains hyperlinks that should bring you to the publisher's website for the corresponding publication.
+
+When you use the `bibliography.bib` file in one of your documents (in LaTeX) and you want to cite one of the references, use the citation key in the `ID` column to cite the relevant publication, e.g., `\cite{Abraham2014FN}`.
+
+If a reference is missing, please [get in touch](#contact).
+
 ```{r}
 DT::datatable(
   bib, class = "cell-border stripe", rownames = FALSE,
@@ -42,7 +60,17 @@ DT::datatable(
   ) 
 ```
 
+# Contact
+
+If a reference is missing, please [create a new issue](https://github.com/lnnrtwttkhn/bibliography/issues/new/choose) and use the issue template for missing publications.
+
+If you have any questions about the bibliography, [the repository](https://github.com/lnnrtwttkhn/bibliography/), if you spotted a bug or would like to make a comment, please also [open an issue](https://github.com/lnnrtwttkhn/bibliography/issues/new) first, or otherwise [email Lennart](mailto:wittkuhn@mpib-berlin.mpg.de).
+
+Thanks!
+
 # Packages
+
+This website was built using the following computational environment:
 
 ```{r}
 sessionInfo()
