@@ -28,9 +28,9 @@ path_bib <- here::here("public", "bibliography.csv")
 ```{r, echo=FALSE}
 bib <- data.table::fread(path_bib) %>%
   # turn URLs into hyperlinks that open in a new tap:
-  transform(url = paste0("<a href='", url , "' target='_blank'>URL</a>")) %>%
+  .[, url := paste0("<a href='", url , "' target='_blank'>URL</a>")] %>%
   # remove curly brackets from the title:
-  transform(title = gsub("[{}]", "", title))
+  .[, title := gsub("[{}]", "", title)]
 ```
 
 # Bibliography

@@ -1,6 +1,7 @@
 dist: xenial
 language: r
 sudo: true
+latex: false
 before_install:
   - sudo apt-get install python3 python3-pip python3-pandas python3-setuptools
   - pip3 install bibtexparser
