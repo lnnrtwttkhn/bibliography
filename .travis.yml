@@ -28,6 +28,6 @@ deploy:
   keep-history: true
   # Git branch on which it should deploy (master, gh-pages, foo...)
   target_branch: gh-pages
-#  on:
-#    # Which branch on commit/push will trigger deployment
-#    branch: master
+  on:
+    # Which branch on commit/push will trigger deployment
+    branch: master
