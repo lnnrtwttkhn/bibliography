@@ -103,7 +103,7 @@ Please see the [LICENSE.md](LICENSE.md) file for details.
 
 ## References and acknowledgements
 
-The following links have helped me to create my own bibliography repo (thank you, internet!):
+The following links have helped me to create my own bibliography repo (thank you, internet! :pray:):
 
 * [How to manage a bibliography like the Context Lab at Dartmouth College, USA](https://github.com/ContextLab/CDL-bibliography)
 * [How to cite an article from arXiv using bibtex](https://tex.stackexchange.com/a/311325)
@@ -136,3 +136,10 @@ The following links have helped me to create my own bibliography repo (thank you
 * [The `DT` R package](https://rstudio.github.io/DT)
 * [How to remove curly brackets in R](https://stackoverflow.com/questions/17528159/removing-curly-brackets-in-r)
 * [How to convert URL character strings into hyperlinks in DT tables in R](https://stackoverflow.com/questions/30901027/convert-a-column-of-text-urls-into-active-hyperlinks-in-shiny)
+* [Travis CI documentation: Building an R Project](https://docs.travis-ci.com/user/languages/r/)
+* [Travid CI documentation: Building a Python project](https://docs.travis-ci.com/user/languages/python/)
+* [Travis CI Issue discussion: Change default version to Python 3.6](https://travis-ci.community/t/change-default-version-of-python-to-3-6/8663/3)
+* [Documentation on the R `DESCRIPTION` file](https://r-pkgs.org/description.html)
+* [How to render RMarkdown from the command line](https://github.com/rstudio/rmarkdown/issues/1100)
+* ["Adding CI to RMarkdown documents" - Tutorial by Simon Goring](http://www.goring.org/resources/Adding_CI_To_RMarkdown.html)
+* [StackOverflow discussion: "Installing both Python and R for a Travis build"](https://stackoverflow.com/questions/44317627/installing-both-python-and-r-for-a-travis-build)
