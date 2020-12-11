@@ -15,7 +15,7 @@ if not os.path.exists(os.path.join(path_root, 'public')):
 with open(os.path.join(path_code, 'bibliography.bib')) as bibtex_file:
     bib_database = bibtexparser.bparser.BibTexParser(common_strings=True).parse_file(bibtex_file)
 df = pd.DataFrame(bib_database.entries)
-df = df.filter(items=['ID', 'title', 'author', 'year', 'journal', 'url'])
+#df = df.filter(items=['ID', 'title', 'author', 'year', 'journal', 'url'])
 df = df.sort_values(by=['author', 'year', 'journal'])
 #html = df.to_html(
 #        render_links=True, index_names=False, bold_rows=False,

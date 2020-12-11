@@ -31,6 +31,9 @@ bib <- data.table::fread(path_bib) %>%
   .[, url := paste0("<a href='", url , "' target='_blank'>URL</a>")] %>%
   # remove curly brackets from the title:
   .[, title := gsub("[{}]", "", title)]
+bib_all = bib %>%
+  # select columns:
+  .[,c("ID", "title", "author", "year", "journal", "url")]
 ```
 
 # Bibliography
@@ -55,7 +58,26 @@ If a reference is missing, please [get in touch](#contact).
 
 ```{r}
 DT::datatable(
-  bib, class = "cell-border stripe", rownames = FALSE,
+  bib_all, class = "cell-border stripe", rownames = FALSE,
+  options = list(scrollX = TRUE), escape = FALSE,
+  ) 
+```
+
+# Filter
+
+In the sections below, I filter the bibliography e.g., depending on certain keywords.
+
+## Replay
+
+Table of publications that mention `replay` in the abstract:
+
+```{r}
+bib_replay = bib %>%
+  filter(stringr::str_detect(string = abstract, pattern = "replay")) %>%
+  setDT(.) %>%
+  .[,c("ID", "title", "author", "year", "journal", "url")]
+DT::datatable(
+  bib_replay, class = "cell-border stripe", rownames = FALSE,
   options = list(scrollX = TRUE), escape = FALSE,
   ) 
 ```
