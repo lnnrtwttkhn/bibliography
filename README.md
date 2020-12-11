@@ -133,3 +133,6 @@ The following links have helped me to create my own bibliography repo (thank you
 * ["Academics should ditch Elsevier and Mendeley — here’s how" - article by Steve Chignell on medium.com](https://medium.com/the-nature-of-food/academics-should-ditch-elsevier-and-mendeley-heres-how-153f1a8bf5f4)
 * ["Why you should not use Mendeley as a reference manager" - article on medium.com](https://medium.com/@gagarine/3-reasons-you-shouldn-t-use-mendeley-8f00d609bd12)
 * [Pandas dataframe to HTML using `pd.to_html()`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_html.html)
+* [The `DT` R package](https://rstudio.github.io/DT)
+* [How to remove curly brackets in R](https://stackoverflow.com/questions/17528159/removing-curly-brackets-in-r)
+* [How to convert URL character strings into hyperlinks in DT tables in R](https://stackoverflow.com/questions/30901027/convert-a-column-of-text-urls-into-active-hyperlinks-in-shiny)

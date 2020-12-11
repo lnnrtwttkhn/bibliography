@@ -30,5 +30,5 @@ papers
 *.fls
 # code output
 *.html
-.Rproj.user
 public
+.Rproj.user

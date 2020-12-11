@@ -1,0 +1,51 @@
+---
+title: "Bibliography"
+author: "Lennart Wittkuhn"
+date: "Last update: `r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    toc: yes
+    self_contained: true
+    toc_float: true
+    toc_depth: 3
+    number_sections: true
+    highlight: pygments
+    theme: cosmo
+    code_folding: "hide"
+    df_print: paged
+    fig_caption: true
+fig.align: "center"
+email: wittkuhn@mpib-berlin.mpg.de
+---
+
+```{r, warning=FALSE, message=FALSE, echo=FALSE}
+if (!requireNamespace("pacman")) install.packages("pacman")
+packages_cran <- c("here", "data.table", "DT", "tidyverse")
+pacman::p_load(char = packages_cran)
+path_bib <- here::here("public", "bibliography.csv")
+```
+
+```{r, echo=FALSE}
+bib <- data.table::fread(path_bib) %>%
+  # turn URLs into hyperlinks that open in a new tap:
+  .[, url := paste0("<a href='", url , "' target='_blank'>URL</a>")] %>%
+  # remove curly brackets from the title:
+  .[, title := gsub("[{}]", "", title)]
+```
+
+# Bibliography
+
+```{r}
+DT::datatable(
+  bib, class = "cell-border stripe", rownames = FALSE,
+  options = list(scrollX = TRUE), escape = FALSE,
+  ) 
+```
+
+# Packages
+
+```{r}
+sessionInfo()
+```
+
+

@@ -1,12 +1,20 @@
-language: python
-python:
-  - "3.8"
-install:
-  - pip install -r requirements.txt
+dist: xenial
+language: r
+sudo: true
+latex: false
+before_install:
+  - sudo apt-get install python3 python3-pip python3-pandas python3-setuptools
+  - pip3 install bibtexparser
 # command to run tests
 script:
-  - python3 code/parser.py
-
+  - make
+cache: packages
+r_packages:
+  - pacman
+  - here
+  - data.table
+  - DT
+  - tidyverse
 deploy:
   # Use Github pages deploy process
   provider: pages
@@ -20,6 +28,6 @@ deploy:
   keep-history: true
   # Git branch on which it should deploy (master, gh-pages, foo...)
   target_branch: gh-pages
-  on:
-    # Which branch on commit/push will trigger deployment
-    branch: master
+#  on:
+#    # Which branch on commit/push will trigger deployment
+#    branch: master
