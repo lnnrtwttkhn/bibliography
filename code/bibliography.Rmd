@@ -99,6 +99,7 @@ List all publications with missing PDFs:
 ```{r}
 bib_pdf = bib %>%
   filter(get("bdsk-file-1") == "") %>%
+  filter(journal != "Zenodo") %>%
   setDT(.) %>%
   .[,c("ID", "title", "author", "year", "journal", "url")]
 DT::datatable(
