@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.com/lnnrtwttkhn/bibliography.svg?branch=master)](https://travis-ci.com/lnnrtwttkhn/bibliography)
 
+Website: https://lennartwittkuhn.com/bibliography/
+
 ## Description
 
 This repository contains my entire bibliography in a `.bib` file and several `.sty` files that I use to customize my LaTeX manuscripts.
