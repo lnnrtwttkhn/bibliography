@@ -58,8 +58,13 @@ If a reference is missing, please [get in touch](#contact).
 
 ```{r}
 DT::datatable(
-  bib_all, class = "cell-border stripe", rownames = FALSE,
-  options = list(scrollX = TRUE), escape = FALSE,
+  bib_all,
+  class = "cell-border stripe", rownames = FALSE, escape = FALSE,
+  options = list(
+    scrollX = TRUE,
+    pageLength = 5,
+    lengthMenu = c(5, 10, 15, 20)
+    ),
   ) 
 ```
 
@@ -77,8 +82,33 @@ bib_replay = bib %>%
   setDT(.) %>%
   .[,c("ID", "title", "author", "year", "journal", "url")]
 DT::datatable(
-  bib_replay, class = "cell-border stripe", rownames = FALSE,
-  options = list(scrollX = TRUE), escape = FALSE,
+  bib_replay,
+  class = "cell-border stripe", rownames = FALSE, escape = FALSE,
+  options = list(
+    scrollX = TRUE,
+    pageLength = 5,
+    lengthMenu = c(5, 10, 15, 20)
+    ),
+  ) 
+```
+
+## Missing PDFs
+
+List all publications with missing PDFs:
+
+```{r}
+bib_pdf = bib %>%
+  filter(get("bdsk-file-1") == "") %>%
+  setDT(.) %>%
+  .[,c("ID", "title", "author", "year", "journal", "url")]
+DT::datatable(
+  bib_pdf,
+  class = "cell-border stripe", rownames = FALSE, escape = FALSE,
+  options = list(
+    scrollX = TRUE,
+    pageLength = 5,
+    lengthMenu = c(5, 10, 15, 20)
+    ),
   ) 
 ```
 
