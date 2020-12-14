@@ -9,7 +9,7 @@ assignees: lnnrtwttkhn
 
 Please add the following publication:
 
-- DOI: *<replace with the DOI>*
-- URL: *<optionally, replace with URL, otherwise delete>*
-- author: *<optionally, replace with author name, otherwise, delete>*
-- journal: *<optionally, replace with journal name, otherwise, delete>*
+- DOI: 
+- URL: 
+- Authors: 
+- Journal:
