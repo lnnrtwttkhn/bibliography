@@ -145,3 +145,5 @@ The following links have helped me to create my own bibliography repo (thank you
 * [How to render RMarkdown from the command line](https://github.com/rstudio/rmarkdown/issues/1100)
 * ["Adding CI to RMarkdown documents" - Tutorial by Simon Goring](http://www.goring.org/resources/Adding_CI_To_RMarkdown.html)
 * [StackOverflow discussion: "Installing both Python and R for a Travis build"](https://stackoverflow.com/questions/44317627/installing-both-python-and-r-for-a-travis-build)
+* [Migrating from BibDesk to Zotero](https://inkdroid.org/2020/09/03/bibdesk-and-zotero/)
+* [Blog post on "BibTeX-friendly PDF management with Zotero" by Richard Zach]
