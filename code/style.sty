@@ -54,8 +54,10 @@
 		\clearpage
 		\pagenumbering{arabic}
 		\setcounter{table}{0}
+		\renewcommand{\tablename}{Supplementary Table}
 		\renewcommand{\thetable}{S\arabic{table}}
 		\setcounter{figure}{0}
+		\renewcommand{\figurename}{Supplementary Figure}
 		\renewcommand{\thefigure}{S\arabic{figure}}
 		\preto{\section}{\resetlinenumber}
 	}
