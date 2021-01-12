@@ -22,7 +22,7 @@ The citation key syntax currently used is: `Last name of first author` + `Public
 
 The `/papers` folder contains all `.pdf` files and will not be synced with the repo. As a further enhancement I am looking into ways how to version-control and synchronize the `.pdf` files with the repo / a cloud sharing service to be able to access them across devices. There is a [corresponding open issue](https://github.com/lnnrtwttkhn/bibliography/issues/5) and help / ideas are very welcome! Thanks!
 
-### `glossary.tex`
+### Glossary: `glossary.tex`
 
 The `glossary.tex` file contains an alphabetically sorted list with commonly used abbreviations.
 It is also located inside the `/code` folder.
@@ -35,7 +35,7 @@ It can be very easily included in any LaTex manuscript using:
 
 Note that the file extension `.tex` is not used when loading the glossary entries.
 
-### `style.sty`
+### Style: `style.sty`
 
 The `style.sty` file contains some frequently used LaTeX packages that can be imported at the beginning
 of any LaTex manuscript using, for example:
@@ -44,6 +44,22 @@ of any LaTex manuscript using, for example:
 \documentclass{article}
 \usepackage{style}
 ```
+
+### Hyphenation: `hyphenation.sty`
+
+In general, LaTeX hyphenates words whenever necessary.
+In some cases, the hyphenation algorithm does not find the correct hyphenation points.
+A solution is to explicitly tell LaTeX about the expectation (for details, see e.g., [here](https://en.wikibooks.org/wiki/LaTeX/Text_Formatting#Hyphenation)).
+
+I collect hyphenation rules in the `hyphenation.sty` file which contains hyphenation rules for both English and German words.
+The file can simply be included in the preamble of any LaTeX document using:
+
+```latex
+\documentclass{article}
+\usepackage{hyphenation}
+```
+
+---
 
 Again, please note that the file extension `.sty` is not used when importing the packages.
 
@@ -147,3 +163,5 @@ The following links have helped me to create my own bibliography repo (thank you
 * [StackOverflow discussion: "Installing both Python and R for a Travis build"](https://stackoverflow.com/questions/44317627/installing-both-python-and-r-for-a-travis-build)
 * [Migrating from BibDesk to Zotero](https://inkdroid.org/2020/09/03/bibdesk-and-zotero/)
 * [Blog post on "BibTeX-friendly PDF management with Zotero" by Richard Zach]
+* [WikiBooks entry on hyphenation in LaTeX](https://en.wikibooks.org/wiki/LaTeX/Text_Formatting#Hyphenation)
+* ["How to add global hyphenation rules?"- discussion on StackExchange](https://tex.stackexchange.com/questions/27890/how-to-add-global-hyphenation-rules)
