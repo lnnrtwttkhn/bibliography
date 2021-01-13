@@ -36,13 +36,13 @@ bib_all = bib %>%
   .[,c("ID", "title", "author", "year", "journal", "url")]
 ```
 
-# Bibliography
-
 ## Overview
 
 Welcome! This website show the entire bibliography maintained by Lennart Wittkuhn.
 
-At the moment, this bibliography contains `r nrow(bib)` references for publications in cognitive and computational neuroscience, psychology, statistics, meta-science and more.
+At the moment, this bibliography contains `r nrow(bib)` references for publications in neuroscience, psychology, statistics, artificial intelligence, meta-science and more.
+
+The source code of this website can be found at <https://github.com/lnnrtwttkhn/bibliography/>.
 
 ## Usage
 
