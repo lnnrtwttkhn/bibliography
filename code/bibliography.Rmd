@@ -20,7 +20,7 @@ email: wittkuhn@mpib-berlin.mpg.de
 
 ```{r, warning=FALSE, message=FALSE, echo=FALSE}
 if (!requireNamespace("pacman")) install.packages("pacman")
-packages_cran <- c("here", "data.table", "DT", "tidyverse")
+packages_cran <- c("here", "data.table", "DT", "tidyverse", "lemon")
 pacman::p_load(char = packages_cran)
 path_bib <- here::here("public", "bibliography.csv")
 ```
@@ -111,6 +111,41 @@ DT::datatable(
     lengthMenu = c(5, 10, 15, 20)
     ),
   ) 
+```
+
+## Publications added per day
+
+```{r}
+bib_time = bib %>%
+  .[, ":="(date_added_posix = as.POSIXct(
+    get("date-added"), format = "%Y-%m-%d", tz = "UTC"))] %>%
+  setorder(date_added_posix) %>%
+  .[, by = .(date_added_posix), .(num_added = .N)]
+```
+
+The figure below shows the number of publications added to the bibliography per day.
+The maximum number of publications added on a single day were `r max(bib_time$num_added)` publications added on `r bib_time$date_added_posix[which.max(bib_time$num_added)]`.
+
+```{r, pub-day, fig.cap="Number of publications added to the bibliography per day (y-axis) over time (in months; x-axis) since creating the bibliography in BibDesk (Sep 2019)"}
+ggplot(data = bib_time, aes(x = as.Date(date_added_posix), y = num_added)) +
+  geom_line() +
+  ggtitle("Number of publications added to the bibliography per day") +
+  ylab(paste0("Number of papers added per day")) +
+  xlab("Time (months)") +
+  theme(panel.background = element_blank()) +
+  theme(panel.grid.major = element_blank()) +
+  theme(panel.grid.minor = element_blank()) +
+  theme(axis.line = element_line(colour = "black")) +
+  coord_capped_cart(bottom = "both", left = "both") +
+  scale_x_date(date_breaks = "1 months", date_labels =  "%b %Y") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  annotate("segment", x = as.Date("2020-11-01 UTC"),
+           xend = as.Date("2020-12-01 UTC"), y = 45, yend = 45,
+           colour = "red", arrow = arrow(length = unit(0.30, "cm"))) +
+  geom_label(aes(x = as.Date("2020-10-01 UTC"), y = 45,
+        label = "hectic review\nwriting starts"),
+        color = "red", size = 3, fontface = "bold")
 ```
 
 # Contact

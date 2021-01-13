@@ -1,5 +1,5 @@
 Package: bibliography
 Title: bibliography
 Version: 0.0.1
-Imports: pacman, here, data.table, DT, tidyverse
+Imports: pacman, here, data.table, DT, tidyverse, lemon
 License: MIT
