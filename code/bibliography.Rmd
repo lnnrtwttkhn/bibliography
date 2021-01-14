@@ -120,10 +120,12 @@ DT::datatable(
 
 ```{r}
 bib_time = bib %>%
-  .[, ":="(date_added_posix = as.POSIXct(
-    get("date-added"), format = "%Y-%m-%d", tz = "UTC"))] %>%
-  setorder(date_added_posix) %>%
-  .[, by = .(date_added_posix), .(num_added = .N)]
+  #.[, ":="(date_added_posix = as.POSIXct(
+  #get("date-added"), format = "%Y-%m-%d", tz = "UTC"))] %>%
+  .[, ":="(date_added_converted = as.Date(
+  get("date-added"), format = "%Y-%m-%d %H:%M:%S %z"))] %>%
+  setorder(date_added_converted) %>%
+  .[, by = .(date_added_converted), .(num_added = .N)]
 rmarkdown::paged_table(bib_time)
 ```
 
@@ -131,7 +133,7 @@ The figure below shows the number of publications added to the bibliography per 
 The maximum number of publications added on a single day were `r max(bib_time$num_added)` publications added on `r bib_time$date_added_posix[which.max(bib_time$num_added)]`.
 
 ```{r, pub-day, fig.cap="Number of publications added to the bibliography per day (y-axis) over time (in months; x-axis) since creating the bibliography in BibDesk (Sep 2019)"}
-ggplot(data = bib_time, aes(x = as.Date(date_added_posix), y = num_added)) +
+ggplot(data = bib_time, aes(x = date_added_converted, y = num_added)) +
   geom_line() +
   ggtitle("Number of publications added to the bibliography per day") +
   ylab(paste0("Number of papers added per day")) +
