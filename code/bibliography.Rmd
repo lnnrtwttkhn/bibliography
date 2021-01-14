@@ -23,6 +23,9 @@ if (!requireNamespace("pacman")) install.packages("pacman")
 packages_cran <- c("here", "data.table", "DT", "tidyverse", "lemon")
 pacman::p_load(char = packages_cran)
 path_bib <- here::here("public", "bibliography.csv")
+# save locale:
+loc <- Sys.getlocale("LC_TIME")
+Sys.setlocale("LC_TIME", "en_US.UTF-8")
 ```
 
 ```{r, echo=FALSE}
@@ -121,6 +124,7 @@ bib_time = bib %>%
     get("date-added"), format = "%Y-%m-%d", tz = "UTC"))] %>%
   setorder(date_added_posix) %>%
   .[, by = .(date_added_posix), .(num_added = .N)]
+rmarkdown::paged_table(bib_time)
 ```
 
 The figure below shows the number of publications added to the bibliography per day.
@@ -162,6 +166,8 @@ This website was built using the following computational environment:
 
 ```{r}
 sessionInfo()
+# set back to old locale
+Sys.setlocale("LC_TIME", loc) 
 ```
 
 
