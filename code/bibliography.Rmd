@@ -22,7 +22,7 @@ email: wittkuhn@mpib-berlin.mpg.de
 
 ```{r, warning=FALSE, message=FALSE, results='hide'}
 if (!requireNamespace("pacman")) install.packages("pacman")
-packages_cran <- c("here", "data.table", "DT", "tidyverse", "lemon")
+packages_cran <- c("here", "data.table", "DT", "tidyverse", "lemon", "bookdown")
 pacman::p_load(char = packages_cran)
 path_bib <- here::here("public", "bibliography.csv")
 # save locale:

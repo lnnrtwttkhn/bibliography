@@ -16,6 +16,7 @@ r_packages:
   - DT
   - tidyverse
   - lemon
+  - bookdown
 deploy:
   # Use Github pages deploy process
   provider: pages
