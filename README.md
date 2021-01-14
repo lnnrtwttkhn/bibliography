@@ -162,6 +162,6 @@ The following links have helped me to create my own bibliography repo (thank you
 * ["Adding CI to RMarkdown documents" - Tutorial by Simon Goring](http://www.goring.org/resources/Adding_CI_To_RMarkdown.html)
 * [StackOverflow discussion: "Installing both Python and R for a Travis build"](https://stackoverflow.com/questions/44317627/installing-both-python-and-r-for-a-travis-build)
 * [Migrating from BibDesk to Zotero](https://inkdroid.org/2020/09/03/bibdesk-and-zotero/)
-* [Blog post on "BibTeX-friendly PDF management with Zotero" by Richard Zach]
+* [Blog post on "BibTeX-friendly PDF management with Zotero" by Richard Zach](https://richardzach.org/2019/02/09/bibtex-friendly-pdf-management-with-zotero/)
 * [WikiBooks entry on hyphenation in LaTeX](https://en.wikibooks.org/wiki/LaTeX/Text_Formatting#Hyphenation)
 * ["How to add global hyphenation rules?"- discussion on StackExchange](https://tex.stackexchange.com/questions/27890/how-to-add-global-hyphenation-rules)
