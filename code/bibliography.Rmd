@@ -18,7 +18,9 @@ fig.align: "center"
 email: wittkuhn@mpib-berlin.mpg.de
 ---
 
-```{r, warning=FALSE, message=FALSE, echo=FALSE}
+# Bibliography
+
+```{r, warning=FALSE, message=FALSE, results='hide'}
 if (!requireNamespace("pacman")) install.packages("pacman")
 packages_cran <- c("here", "data.table", "DT", "tidyverse", "lemon")
 pacman::p_load(char = packages_cran)
