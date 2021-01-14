@@ -3,14 +3,14 @@ title: "Bibliography"
 author: "Lennart Wittkuhn"
 date: "Last update: `r format(Sys.time(), '%d %B, %Y')`"
 output:
-  html_document:
+  bookdown::html_document2:
     toc: yes
     self_contained: true
     toc_float: true
     toc_depth: 3
     number_sections: false
     highlight: pygments
-    theme: cosmo
+    theme: spacelab
     code_folding: "hide"
     df_print: paged
     fig_caption: true
@@ -128,17 +128,16 @@ bib_time = bib %>%
   get("date-added"), format = "%Y-%m-%d %H:%M:%S %z"))] %>%
   setorder(date_added_converted) %>%
   .[, by = .(date_added_converted), .(num_added = .N)]
-rmarkdown::paged_table(bib_time)
 ```
 
-The figure below shows the number of publications added to the bibliography per day.
-The maximum number of publications added on a single day were `r max(bib_time$num_added)` publications added on `r bib_time$date_added_posix[which.max(bib_time$num_added)]`.
+Figure \@ref(fig:pub-day) shows the number of publications added to the bibliography per day.
+The maximum number of publications added on a single day were `r max(bib_time$num_added)` publications added on `r bib_time$date_added_converted[which.max(bib_time$num_added)]`.
 
-```{r, pub-day, fig.cap="Number of publications added to the bibliography per day (y-axis) over time (in months; x-axis) since creating the bibliography in BibDesk (Sep 2019)"}
+```{r, pub-day, fig.cap="Number of publications added to the bibliography per day (y-axis) over time (in months; x-axis) since creating the bibliography in BibDesk in Sep 2019.", fig.fullwidth=TRUE}
 ggplot(data = bib_time, aes(x = date_added_converted, y = num_added)) +
   geom_line() +
   ggtitle("Number of publications added to the bibliography per day") +
-  ylab(paste0("Number of papers added per day")) +
+  ylab(paste0("Number of publications added per day")) +
   xlab("Time (months)") +
   theme(panel.background = element_blank()) +
   theme(panel.grid.major = element_blank()) +
