@@ -20,18 +20,20 @@ email: wittkuhn@mpib-berlin.mpg.de
 
 # Bibliography
 
-```{r, warning=FALSE, message=FALSE, results='hide'}
+[![Build Status](https://travis-ci.com/lnnrtwttkhn/bibliography.svg?branch=master)](https://travis-ci.com/lnnrtwttkhn/bibliography)
+
+```{r, warning=FALSE, message=FALSE, results='hide', echo=FALSE}
 if (!requireNamespace("pacman")) install.packages("pacman")
 packages_cran <- c(
   "here", "data.table", "DT", "tidyverse", "lemon", "bookdown", "assertr")
 pacman::p_load(char = packages_cran)
-path_bib <- here::here("public", "bibliography.csv")
 # save locale:
 loc <- Sys.getlocale("LC_TIME")
 Sys.setlocale("LC_TIME", "en_US.UTF-8")
 ```
 
 ```{r}
+path_bib <- here::here("public", "bibliography.csv")
 bib <- data.table::fread(path_bib) %>%
   # turn URLs into hyperlinks that open in a new tap:
   .[, url := paste0("<a href='", url , "' target='_blank'>URL</a>")] %>%
