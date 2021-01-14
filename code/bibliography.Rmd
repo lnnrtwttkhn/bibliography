@@ -22,7 +22,8 @@ email: wittkuhn@mpib-berlin.mpg.de
 
 ```{r, warning=FALSE, message=FALSE, results='hide'}
 if (!requireNamespace("pacman")) install.packages("pacman")
-packages_cran <- c("here", "data.table", "DT", "tidyverse", "lemon", "bookdown")
+packages_cran <- c(
+  "here", "data.table", "DT", "tidyverse", "lemon", "bookdown", "assertr")
 pacman::p_load(char = packages_cran)
 path_bib <- here::here("public", "bibliography.csv")
 # save locale:
@@ -30,7 +31,7 @@ loc <- Sys.getlocale("LC_TIME")
 Sys.setlocale("LC_TIME", "en_US.UTF-8")
 ```
 
-```{r, echo=FALSE}
+```{r}
 bib <- data.table::fread(path_bib) %>%
   # turn URLs into hyperlinks that open in a new tap:
   .[, url := paste0("<a href='", url , "' target='_blank'>URL</a>")] %>%
@@ -122,12 +123,11 @@ DT::datatable(
 
 ```{r}
 bib_time = bib %>%
-  #.[, ":="(date_added_posix = as.POSIXct(
-  #get("date-added"), format = "%Y-%m-%d", tz = "UTC"))] %>%
   .[, ":="(date_added_converted = as.Date(
   get("date-added"), format = "%Y-%m-%d %H:%M:%S %z"))] %>%
   setorder(date_added_converted) %>%
-  .[, by = .(date_added_converted), .(num_added = .N)]
+  .[, by = .(date_added_converted), .(num_added = .N)] %>%
+  verify(.[, .(N = .(sum(num_added)))]$N == nrow(bib))
 ```
 
 Figure \@ref(fig:pub-day) shows the number of publications added to the bibliography per day.
