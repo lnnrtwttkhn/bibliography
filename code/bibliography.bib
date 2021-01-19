@@ -1,12 +1,78 @@
 %% This BibTeX bibliography file was created using BibDesk.
 %% https://bibdesk.sourceforge.io/
 
-%% Created for Wittkuhn, Lennart at 2021-01-19 17:46:25 +0100 
+%% Created for Wittkuhn, Lennart at 2021-01-19 20:17:59 +0100 
 
 
 %% Saved with string encoding Unicode (UTF-8) 
 
 
+
+@article{Golden2020B,
+	abstract = {Artificial neural networks overwrite previously learned tasks when trained sequentially, a phenomenon known as catastrophic forgetting. In contrast, the brain learns continuously, and typically learns best when new learning is interleaved with periods of sleep for memory consolidation. In this study, we used spiking network to study mechanisms behind catastrophic forgetting and the role of sleep in preventing it. The network could be trained to learn a complex foraging task but exhibited catastrophic forgetting when trained sequentially on multiple tasks. New task training moved the synaptic weight configuration away from the manifold representing old tasks leading to forgetting. Interleaving new task training with periods of off-line reactivation, mimicking biological sleep, mitigated catastrophic forgetting by pushing the synaptic weight configuration towards the intersection of the solution manifolds representing multiple tasks. The study reveals a possible strategy of synaptic weights dynamics the brain applies during sleep to prevent forgetting and optimize learning.Competing Interest StatementThe authors have declared no competing interest.},
+	author = {Golden, Ryan and Delanois, Jean Erik and Sanda, Pavel and Bazhenov, Maxim},
+	date-added = {2021-01-19 20:17:41 +0100},
+	date-modified = {2021-01-19 20:17:56 +0100},
+	doi = {10.1101/688622},
+	elocation-id = {688622},
+	eprint = {https://www.biorxiv.org/content/early/2020/06/10/688622.full.pdf},
+	journal = {bioRxiv},
+	publisher = {Cold Spring Harbor Laboratory},
+	title = {Sleep prevents catastrophic forgetting in spiking neural networks by forming joint synaptic weight representations},
+	url = {https://www.biorxiv.org/content/early/2020/06/10/688622},
+	year = {2020},
+	Bdsk-File-1 = {YnBsaXN0MDDSAQIDBFxyZWxhdGl2ZVBhdGhZYWxpYXNEYXRhXxAZLi4vcGFwZXJzL2dvbGRlbjIwMjBiLnBkZk8RAWYAAAAAAWYAAgAABW1hY09TAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABCRAAB/////w9nb2xkZW4yMDIwYi5wZGYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////AAAAAAAAAAAAAAAAAAEAAgAACiBjdQAAAAAAAAAAAAAAAAAGcGFwZXJzAAIAPi86VXNlcnM6d2l0dGt1aG46RG9jdW1lbnRzOmJpYmxpb2dyYXBoeTpwYXBlcnM6Z29sZGVuMjAyMGIucGRmAA4AIAAPAGcAbwBsAGQAZQBuADIAMAAyADAAYgAuAHAAZABmAA8ADAAFAG0AYQBjAE8AUwASADxVc2Vycy93aXR0a3Vobi9Eb2N1bWVudHMvYmlibGlvZ3JhcGh5L3BhcGVycy9nb2xkZW4yMDIwYi5wZGYAEwABLwAAFQACAA///wAAAAgADQAaACQAQAAAAAAAAAIBAAAAAAAAAAUAAAAAAAAAAAAAAAAAAAGq}}
+
+@article{Gonzalez2020E,
+	abstract = {Continual learning remains an unsolved problem in artificial neural networks. The brain has evolved mechanisms to prevent catastrophic forgetting of old knowledge during new training. Building upon data suggesting the importance of sleep in learning and memory, we tested a hypothesis that sleep protects old memories from being forgotten after new learning. In the thalamocortical model, training a new memory interfered with previously learned old memories leading to degradation and forgetting of the old memory traces. Simulating sleep after new learning reversed the damage and enhanced old and new memories. We found that when a new memory competed for previously allocated neuronal/synaptic resources, sleep replay changed the synaptic footprint of the old memory to allow overlapping neuronal populations to store multiple memories. Our study predicts that memory storage is dynamic, and sleep enables continual learning by combining consolidation of new memory traces with reconsolidation of old memory traces to minimize interference.},
+	article_type = {journal},
+	author = {Gonz{\'a}lez, Oscar C and Sokolov, Yury and Krishnan, Giri P and Delanois, Jean Erik and Bazhenov, Maxim},
+	citation = {eLife 2020;9:e51005},
+	date-added = {2021-01-19 20:16:13 +0100},
+	date-modified = {2021-01-19 20:16:42 +0100},
+	doi = {10.7554/eLife.51005},
+	editor = {van Rossum, Mark CW and Colgin, Laura L and Battaglia, Francesco P},
+	issn = {2050-084X},
+	journal = {eLife},
+	keywords = {sleep, memory consolidation, continual learning, neural network, catastrophic forgetting},
+	month = {aug},
+	pages = {e51005},
+	pub_date = {2020-08-04},
+	publisher = {eLife Sciences Publications, Ltd},
+	title = {Can sleep protect memories from catastrophic forgetting?},
+	url = {https://doi.org/10.7554/eLife.51005},
+	volume = 9,
+	year = 2020,
+	Bdsk-File-1 = {YnBsaXN0MDDSAQIDBFxyZWxhdGl2ZVBhdGhZYWxpYXNEYXRhXxAbLi4vcGFwZXJzL2dvbnphbGV6MjAyMGUucGRmTxEBbgAAAAABbgACAAAFbWFjT1MAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEJEAAH/////EWdvbnphbGV6MjAyMGUucGRmAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP////8AAAAAAAAAAAAAAAAAAQACAAAKIGN1AAAAAAAAAAAAAAAAAAZwYXBlcnMAAgBALzpVc2Vyczp3aXR0a3VobjpEb2N1bWVudHM6YmlibGlvZ3JhcGh5OnBhcGVyczpnb256YWxlejIwMjBlLnBkZgAOACQAEQBnAG8AbgB6AGEAbABlAHoAMgAwADIAMABlAC4AcABkAGYADwAMAAUAbQBhAGMATwBTABIAPlVzZXJzL3dpdHRrdWhuL0RvY3VtZW50cy9iaWJsaW9ncmFwaHkvcGFwZXJzL2dvbnphbGV6MjAyMGUucGRmABMAAS8AABUAAgAP//8AAAAIAA0AGgAkAEIAAAAAAAACAQAAAAAAAAAFAAAAAAAAAAAAAAAAAAABtA==}}
+
+@article{Roscow2019B,
+	abstract = {Neural activity encoding recent experiences is replayed during sleep and rest to promote consolidation of the corresponding memories. However, precisely which features of experience influence replay prioritisation to optimise adaptive behaviour remains unclear. Here, we trained adult male rats on a novel maze-based rein-forcement learning task designed to dissociate reward outcomes from reward-prediction errors. Four variations of a reinforcement learning model were fitted to the rats{\textquoteright} behaviour over multiple days. Behaviour was best predicted by a model incorporating replay biased by reward-prediction error, compared to the same model with no replay; random replay or reward-biased replay produced poorer predictions of behaviour. This insight disentangles the influences of salience on replay, suggesting that reinforcement learning is tuned by post-learning replay biased by reward-prediction error, not by reward per se. This work therefore provides a behavioural and theoretical toolkit with which to measure and interpret replay in striatal, hippocampal and neocortical circuits.},
+	author = {Roscow, Emma L. and Jones, Matthew W. and Lepora, Nathan F.},
+	date-added = {2021-01-19 20:00:26 +0100},
+	date-modified = {2021-01-19 20:00:41 +0100},
+	doi = {10.1101/716290},
+	elocation-id = {716290},
+	eprint = {https://www.biorxiv.org/content/early/2019/07/26/716290.full.pdf},
+	journal = {bioRxiv},
+	publisher = {Cold Spring Harbor Laboratory},
+	title = {Behavioural and computational evidence for memory consolidation biased by reward-prediction errors},
+	url = {https://www.biorxiv.org/content/early/2019/07/26/716290},
+	year = {2019},
+	Bdsk-File-1 = {YnBsaXN0MDDSAQIDBFxyZWxhdGl2ZVBhdGhZYWxpYXNEYXRhXxAZLi4vcGFwZXJzL3Jvc2NvdzIwMTliLnBkZk8RAWYAAAAAAWYAAgAABW1hY09TAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABCRAAB/////w9yb3Njb3cyMDE5Yi5wZGYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////AAAAAAAAAAAAAAAAAAEAAgAACiBjdQAAAAAAAAAAAAAAAAAGcGFwZXJzAAIAPi86VXNlcnM6d2l0dGt1aG46RG9jdW1lbnRzOmJpYmxpb2dyYXBoeTpwYXBlcnM6cm9zY293MjAxOWIucGRmAA4AIAAPAHIAbwBzAGMAbwB3ADIAMAAxADkAYgAuAHAAZABmAA8ADAAFAG0AYQBjAE8AUwASADxVc2Vycy93aXR0a3Vobi9Eb2N1bWVudHMvYmlibGlvZ3JhcGh5L3BhcGVycy9yb3Njb3cyMDE5Yi5wZGYAEwABLwAAFQACAA///wAAAAgADQAaACQAQAAAAAAAAAIBAAAAAAAAAAUAAAAAAAAAAAAAAAAAAAGq}}
+
+@article{Zhao2019P,
+	abstract = {Information stored in memory influences the formation of preferences and beliefs in most everyday decision tasks. The richness of this information, and the complexity inherent in interacting memory and decision processes, makes the quantitative model-driven analysis of such decisions very difficult. In this paper we present a general framework that is capable of addressing the theoretical and methodological barriers to building formal models of naturalistic memory-based decision making. Our framework implements established theories of memory search and decision making within a single integrated cognitive system, and uses computational language models to quantify the thoughts over which memory and decision processes operate. It can thus describe both the content of the information that is sampled from memory, as well as the processes involved in retrieving and evaluating this information in order to make a decision. Furthermore, our framework is tractable, and the parameters that characterize memory-based decisions can be recovered using thought-listing and choice data from existing experimental tasks, and in turn be used to make quantitative predictions regarding choice probability, length of deliberation, retrieved thoughts, and the effects of decision context. We showcase the power and generality of our framework by applying it to study risk perception, consumer behavior, financial decision making, ethical decision making, legal decision making, food choice, and judgments about well-being, society and culture.},
+	author = {Zhao, Wenjia Joyce and Richie, Russell and Bhatia, Sudeep},
+	date-added = {2021-01-19 19:34:53 +0100},
+	date-modified = {2021-01-19 19:36:00 +0100},
+	doi = {10.31234/osf.io/nwxs2},
+	journal = {PsyArXiv},
+	month = {nov},
+	publisher = {Center for Open Science},
+	title = {Process and Content in Decisions from Memory},
+	url = {https://doi.org/10.31234%2Fosf.io%2Fnwxs2},
+	year = 2019,
+	Bdsk-File-1 = {YnBsaXN0MDDSAQIDBFxyZWxhdGl2ZVBhdGhZYWxpYXNEYXRhXxAXLi4vcGFwZXJzL3poYW8yMDE5cC5wZGZPEQFeAAAAAAFeAAIAAAVtYWNPUwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQkQAAf////8NemhhbzIwMTlwLnBkZgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAABAAIAAAogY3UAAAAAAAAAAAAAAAAABnBhcGVycwACADwvOlVzZXJzOndpdHRrdWhuOkRvY3VtZW50czpiaWJsaW9ncmFwaHk6cGFwZXJzOnpoYW8yMDE5cC5wZGYADgAcAA0AegBoAGEAbwAyADAAMQA5AHAALgBwAGQAZgAPAAwABQBtAGEAYwBPAFMAEgA6VXNlcnMvd2l0dGt1aG4vRG9jdW1lbnRzL2JpYmxpb2dyYXBoeS9wYXBlcnMvemhhbzIwMTlwLnBkZgATAAEvAAAVAAIAD///AAAACAANABoAJAA+AAAAAAAAAgEAAAAAAAAABQAAAAAAAAAAAAAAAAAAAaA=}}
 
 @article{Dunsmoor2015BP,
 	abstract = {Fear can be an adaptive emotion that helps defend against potential danger. Classical conditioning models elegantly describe how animals learn which stimuli in the environment signal danger, but understanding how this learning is generalized to other stimuli that resemble aspects of a learned threat remains a challenge. Critically, the overgeneralization of fear to harmless stimuli or situations is a burden to daily life and characteristic of posttraumatic stress disorder and other anxiety disorders. Here, we review emerging evidence on behavioral and neural mechanisms of generalization of emotional learning with the goal of encouraging further research on generalization in anxiety disorders. We begin by placing research on fear generalization in a rich historical context of stimulus generalization dating back to Pavlov, which lays the foundation for theoretical and experimental approaches used today. We then transition to contemporary behavioral and neurobiological research on generalization of emotional learning in humans and nonhuman animals and discuss the factors that promote generalization on the one hand from discrimination on the other hand.},
