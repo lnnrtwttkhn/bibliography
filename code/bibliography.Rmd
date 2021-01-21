@@ -139,7 +139,7 @@ The maximum number of publications added on a single day were `r max(bib_time$nu
 
 ```{r, pub-day, fig.cap="Number of publications added to the bibliography per day (y-axis) over time (in months; x-axis) since creating the bibliography in BibDesk in Sep 2019.", fig.fullwidth=TRUE}
 ggplot(data = bib_time, aes(x = date_added_converted, y = num_added)) +
-  geom_line() +
+  geom_bar(stat = "identity") +
   ggtitle("Number of publications added to the bibliography per day") +
   ylab("Number of publications added per day") +
   xlab("Time (months)") +
