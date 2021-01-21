@@ -52,7 +52,7 @@ bib_all = bib %>%
 Welcome! This website shows the entire bibliography maintained by Lennart Wittkuhn.
 
 At the moment, this bibliography contains `r nrow(bib)` references for publications in neuroscience, psychology, statistics, artificial intelligence, meta-science and more.
-The last reference was added on `r as.Date(max(bib$date_added_converted), format = "%Y-%m-%d %H:%M:%S %z")`.
+The lastest reference was added on `r format(as.Date(max(bib$date_added_converted), format = "%Y-%m-%d %H:%M:%S %z"), "%d %B, %Y")`.
 
 The source code of this website can be found at <https://github.com/lnnrtwttkhn/bibliography/>.
 
@@ -135,7 +135,7 @@ bib_time = bib %>%
 ```
 
 Figure \@ref(fig:pub-day) shows the number of publications added to the bibliography per day.
-The maximum number of publications added on a single day were `r max(bib_time$num_added)` publications added on `r bib_time$date_added_converted[which.max(bib_time$num_added)]`.
+The maximum number of publications added on a single day were `r max(bib_time$num_added)` publications added on `r format(bib_time$date_added_converted[which.max(bib_time$num_added)], "%d %B, %Y")`.
 
 ```{r, pub-day, fig.cap="Number of publications added to the bibliography per day (y-axis) over time (in months; x-axis) since creating the bibliography in BibDesk in Sep 2019.", fig.fullwidth=TRUE}
 ggplot(data = bib_time, aes(x = date_added_converted, y = num_added)) +
