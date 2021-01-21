@@ -10,7 +10,7 @@ output:
     toc_depth: 3
     number_sections: false
     highlight: pygments
-    theme: spacelab
+    theme: united
     code_folding: "hide"
     df_print: paged
     fig_caption: true
@@ -49,7 +49,7 @@ bib_all = bib %>%
 
 ## Overview
 
-Welcome! This website show the entire bibliography maintained by Lennart Wittkuhn.
+Welcome! This website shows the entire bibliography maintained by Lennart Wittkuhn.
 
 At the moment, this bibliography contains `r nrow(bib)` references for publications in neuroscience, psychology, statistics, artificial intelligence, meta-science and more.
 The last reference was added on `r as.Date(max(bib$date_added_converted), format = "%Y-%m-%d %H:%M:%S %z")`.
@@ -64,7 +64,7 @@ You can use the `Search` bar on the right to search for certain publications (e.
 
 The `URL` column contains hyperlinks that should bring you to the publisher's website for the corresponding publication.
 
-When you use the `bibliography.bib` file in one of your documents (in LaTeX) and you want to cite one of the references, use the citation key in the `ID` column to cite the relevant publication, e.g., `\cite{Abraham2014FN}`.
+When you use the `bibliography.bib` file in one of your documents (in LaTeX) and you want to cite one of the references, use the citation key in the `ID` column to cite the relevant publication, e.g., `\cite{Wittkuhn2020B}`.
 
 If a reference is missing, please [get in touch](#contact).
 
