@@ -162,6 +162,25 @@ DT::datatable(
   ) 
 ```
 
+## Missing abstracts
+
+```{r}
+bib_abstract = bib %>%
+  filter(get("abstract") == "") %>%
+  filter(journal != "Zenodo") %>%
+  setDT(.) %>%
+  .[,c("ID", "title", "author", "year", "journal", "url")]
+DT::datatable(
+  bib_abstract,
+  class = "cell-border stripe", rownames = FALSE, escape = FALSE,
+  options = list(
+    scrollX = TRUE,
+    pageLength = 5,
+    lengthMenu = c(5, 10, 15, 20)
+    ),
+  ) 
+```
+
 ## Publications added per day
 
 ```{r}
