@@ -104,6 +104,43 @@ DT::datatable(
   ) 
 ```
 
+Figure \@ref(fig:replay-year) shows the number of papers published per year, containing replay-related search terms in the abstract.
+Note, that the numbers are based only on the publications in the bibliography.
+
+```{r}
+search_terms = c("replay", "reactivation")
+bib_replay_time = bib %>%
+  filter(stringr::str_detect(
+    string = abstract, pattern = paste(search_terms, collapse = "|"))) %>%
+  setDT(.) %>%
+  .[, by = .(year), .(N = .N)] %>%
+  setorder(year) %>%
+  transform(year = as.Date(ISOdate(year, 1, 1)))
+```
+
+```{r, replay-year, fig.cap="Number of papers published per year, containing replay-related search terms in the abstract", fig.fullwidth=TRUE}
+title_string = paste("Number of papers published each year\n",
+                     "with abstracts containing the following search terms:\n",
+                     paste(search_terms, collapse = ", " ))
+ggplot(data = bib_replay_time, aes(x = year, y = N)) +
+  geom_bar(stat = "identity") +
+  ggtitle(title_string) +
+  ylab("Number of publications per year") +
+  xlab("Publication year") +
+  theme(panel.background = element_blank()) +
+  theme(panel.grid.major = element_blank()) +
+  theme(panel.grid.minor = element_blank()) +
+  theme(axis.line = element_line(colour = "black")) +
+  coord_capped_cart(bottom = "both", left = "both") +
+  scale_x_date(date_breaks = "1 years", date_labels =  "%Y") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  geom_text(aes(label = N), vjust = -0.5) +
+  ylim(c(0, 70))
+```
+
+
+
 ## Missing PDFs
 
 List all publications with missing PDFs:
