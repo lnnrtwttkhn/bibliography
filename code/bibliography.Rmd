@@ -229,7 +229,12 @@ If you have any questions about the bibliography, [the repository](https://githu
 
 Thanks!
 
-# Packages
+# Behind the scenes
+
+The Python script below (`parser.py`) reads the `bibliography.bib` file and uses (1) `bibtexparser` to read the bibliography contents and (2) `pandas` to transform the content into a `bibliography.csv` file that is read into this notebook.
+
+```{python, echo=TRUE, code=readLines(here::here("code", "parser.py")), eval=FALSE, python.reticulate=FALSE, class.source = 'fold-show'}
+```
 
 This website was built using the following computational environment:
 

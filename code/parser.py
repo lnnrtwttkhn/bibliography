@@ -13,7 +13,8 @@ path_code = os.path.join(path_root, 'code')
 if not os.path.exists(os.path.join(path_root, 'public')):
     os.makedirs(os.path.join(path_root, 'public'))
 with open(os.path.join(path_code, 'bibliography.bib')) as bibtex_file:
-    bib_database = bibtexparser.bparser.BibTexParser(common_strings=True).parse_file(bibtex_file)
+    bib_database = bibtexparser.bparser.BibTexParser(
+      common_strings=True).parse_file(bibtex_file)
 df = pd.DataFrame(bib_database.entries)
 df = df.sort_values(by=['author', 'year', 'journal'])
 csv_name = "bibliography.csv"
