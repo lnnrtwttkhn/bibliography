@@ -110,8 +110,14 @@ Note, that the numbers are based only on the publications in the bibliography.
 ```{r}
 search_terms = c("replay", "reactivation")
 bib_replay_time = bib %>%
-  filter(stringr::str_detect(
-    string = abstract, pattern = paste(search_terms, collapse = "|"))) %>%
+  transform(abstract = tolower(abstract), title = tolower(title)) %>%
+  # search for search terms in title and abstract
+  filter_at(
+    .vars = vars(abstract, title),
+    .vars_predicate = any_vars(
+      stringr::str_detect(
+        string = .,
+        pattern = paste(search_terms, collapse = "|")))) %>%
   setDT(.) %>%
   .[, by = .(year), .(N = .N)] %>%
   setorder(year) %>%
