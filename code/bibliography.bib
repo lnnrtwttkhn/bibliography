@@ -1,12 +1,29 @@
 %% This BibTeX bibliography file was created using BibDesk.
 %% https://bibdesk.sourceforge.io/
 
-%% Created for Wittkuhn, Lennart at 2021-02-09 18:18:53 +0100 
+%% Created for Wittkuhn, Lennart at 2021-02-10 17:43:02 +0100 
 
 
 %% Saved with string encoding Unicode (UTF-8) 
 
 
+
+@article{Kakade2002NN,
+	abstract = {In the temporal difference model of primate dopamine neurons, their phasic activity reports a prediction error for future reward. This model is supported by a wealth of experimental data. However, in certain circumstances, the activity of the dopamine cells seems anomalous under the model, as they respond in particular ways to stimuli that are not obviously related to predictions of reward. In this paper, we address two important sets of anomalies, those having to do with generalization and novelty. Generalization responses are treated as the natural consequence of partial information; novelty responses are treated by the suggestion that dopamine cells multiplex information about reward bonuses, including exploration bonuses and shaping bonuses. We interpret this additional role for dopamine in terms of the mechanistic attentional and psychomotor effects of dopamine, having the computational role of guiding exploration.},
+	author = {Kakade, Sham and Dayan, Peter},
+	date-added = {2021-02-10 10:24:03 +0100},
+	date-modified = {2021-02-10 10:24:25 +0100},
+	doi = {https://doi.org/10.1016/S0893-6080(02)00048-5},
+	issn = {0893-6080},
+	journal = {Neural Networks},
+	keywords = {Dopamine, Reinforcement learning, Exploration, Temporal difference, Generalization},
+	number = {4},
+	pages = {549-559},
+	title = {Dopamine: generalization and bonuses},
+	url = {https://www.sciencedirect.com/science/article/pii/S0893608002000485},
+	volume = {15},
+	year = {2002},
+	Bdsk-File-1 = {YnBsaXN0MDDSAQIDBFxyZWxhdGl2ZVBhdGhZYWxpYXNEYXRhXxAaLi4vcGFwZXJzL2tha2FkZTIwMDJubi5wZGZPEQFsAAAAAAFsAAIAAAVtYWNPUwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQkQAAf////8Qa2FrYWRlMjAwMm5uLnBkZgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAABAAIAAAogY3UAAAAAAAAAAAAAAAAABnBhcGVycwACAD8vOlVzZXJzOndpdHRrdWhuOkRvY3VtZW50czpiaWJsaW9ncmFwaHk6cGFwZXJzOmtha2FkZTIwMDJubi5wZGYAAA4AIgAQAGsAYQBrAGEAZABlADIAMAAwADIAbgBuAC4AcABkAGYADwAMAAUAbQBhAGMATwBTABIAPVVzZXJzL3dpdHRrdWhuL0RvY3VtZW50cy9iaWJsaW9ncmFwaHkvcGFwZXJzL2tha2FkZTIwMDJubi5wZGYAABMAAS8AABUAAgAP//8AAAAIAA0AGgAkAEEAAAAAAAACAQAAAAAAAAAFAAAAAAAAAAAAAAAAAAABsQ==}}
 
 @article{Doya2000NC,
 	abstract = { This article presents a reinforcement learning framework for continuous-time dynamical systems without a priori discretization of time, state, and action. Basedonthe Hamilton-Jacobi-Bellman (HJB) equation for infinite-horizon, discounted reward problems, we derive algorithms for estimating value functions and improving policies with the use of function approximators. The process of value function estimation is formulated as the minimization of a continuous-time form of the temporal difference (TD) error. Update methods based on backward Euler approximation and exponential eligibility traces are derived, and their correspondences with the conventional residual gradient, TD (0), and TD (λ) algorithms are shown. For policy improvement, two methods---a continuous actor-critic method and a value-gradient-based greedy policy---are formulated. As a special case of the latter, a nonlinear feedback control law using the value gradient and the model of the input gain is derived. The advantage updating, a model-free algorithm derived previously, is also formulated in the HJB-based framework. The performance of the proposed algorithms is first tested in a nonlinear control task of swinging a pendulum up with limited torque. It is shown in the simulations that (1) the task is accomplished by the continuous actor-critic method in a number of trials several times fewer than by the conventional discrete actor-critic method; (2) among the continuous policy update methods, the value-gradient-based policy with a known or learned dynamic model performs several times better than the actor-critic method; and (3) a value function update using exponential eligibility traces is more efficient and stable than that based on Euler approximation. The algorithms are then tested in a higher-dimensional task: cart-pole swing-up. This task is accomplished in several hundred trials using the value-gradient-based policy with a learned dynamic model. },
@@ -149,7 +166,7 @@ Effizienz.},
 	url = {https://royalsocietypublishing.org/doi/abs/10.1098/rspb.2018.1645},
 	volume = {285},
 	year = {2018},
-	Bdsk-File-1 = {YnBsaXN0MDDSAQIDBFxyZWxhdGl2ZVBhdGhZYWxpYXNEYXRhXxAeLi4vcGFwZXJzL2dhcmRuZXIyMDE4cHJzYnMucGRmTxEBfAAAAAABfAACAAAFbWFjT1MAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEJEAAH/////FGdhcmRuZXIyMDE4cHJzYnMucGRmAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP////8AAAAAAAAAAAAAAAAAAQACAAAKIGN1AAAAAAAAAAAAAAAAAAZwYXBlcnMAAgBDLzpVc2Vyczp3aXR0a3VobjpEb2N1bWVudHM6YmlibGlvZ3JhcGh5OnBhcGVyczpnYXJkbmVyMjAxOHByc2JzLnBkZgAADgAqABQAZwBhAHIAZABuAGUAcgAyADAAMQA4AHAAcgBzAGIAcwAuAHAAZABmAA8ADAAFAG0AYQBjAE8AUwASAEFVc2Vycy93aXR0a3Vobi9Eb2N1bWVudHMvYmlibGlvZ3JhcGh5L3BhcGVycy9nYXJkbmVyMjAxOHByc2JzLnBkZgAAEwABLwAAFQACAA///wAAAAgADQAaACQARQAAAAAAAAIBAAAAAAAAAAUAAAAAAAAAAAAAAAAAAAHF}}
+	Bdsk-File-1 = {YnBsaXN0MDDSAQIDBFxyZWxhdGl2ZVBhdGhZYWxpYXNEYXRhXxAeLi4vcGFwZXJzL2dhcmRuZXIyMDE4cHJzYnMucGRmTxEBfAAAAAABfAACAAAFbWFjT1MAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEJEAAH/////FGdhcmRuZXIyMDE4cHJzYnMucGRmAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP////8AAAAAUERGIENBUk8AAQACAAAKIGN1AAAAAAAAAAAAAAAAAAZwYXBlcnMAAgBDLzpVc2Vyczp3aXR0a3VobjpEb2N1bWVudHM6YmlibGlvZ3JhcGh5OnBhcGVyczpnYXJkbmVyMjAxOHByc2JzLnBkZgAADgAqABQAZwBhAHIAZABuAGUAcgAyADAAMQA4AHAAcgBzAGIAcwAuAHAAZABmAA8ADAAFAG0AYQBjAE8AUwASAEFVc2Vycy93aXR0a3Vobi9Eb2N1bWVudHMvYmlibGlvZ3JhcGh5L3BhcGVycy9nYXJkbmVyMjAxOHByc2JzLnBkZgAAEwABLwAAFQACAA///wAAAAgADQAaACQARQAAAAAAAAIBAAAAAAAAAAUAAAAAAAAAAAAAAAAAAAHF}}
 
 @article{Sharpe2017NN,
 	abstract = {Associative learning is driven by prediction errors. Dopamine transients correlate with these errors, which current interpretations limit to endowing cues with a scalar quantity reflecting the value of future rewards. We tested whether dopamine might act more broadly to support learning of an associative model of the environment. Using sensory preconditioning, we show that prediction errors underlying stimulus--stimulus learning can be blocked behaviorally and reinstated by optogenetically activating dopamine neurons. We further show that suppressing the firing of these neurons across the transition prevents normal stimulus--stimulus learning. These results establish that the acquisition of model-based information about transitions between nonrewarding events is also driven by prediction errors and that, contrary to existing canon, dopamine transients are both sufficient and necessary to support this type of learning. Our findings open new possibilities for how these biological signals might support associative learning in the mammalian brain in these and other contexts.},
@@ -23806,7 +23823,7 @@ slow rhythm, effectively triggered hippocampal discharges related to fast (rippl
 	url = {http://dx.doi.org/10.1038/s41593-019-0389-0},
 	volume = {22},
 	year = {2019},
-	Bdsk-File-1 = {YnBsaXN0MDDSAQIDBFxyZWxhdGl2ZVBhdGhZYWxpYXNEYXRhXxAaLi4vcGFwZXJzL3ZldGVyZTIwMTlubi5wZGZPEQFsAAAAAAFsAAIAAAVtYWNPUwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQkQAAf////8QdmV0ZXJlMjAxOW5uLnBkZgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAABAAIAAAogY3UAAAAAAAAAAAAAAAAABnBhcGVycwACAD8vOlVzZXJzOndpdHRrdWhuOkRvY3VtZW50czpiaWJsaW9ncmFwaHk6cGFwZXJzOnZldGVyZTIwMTlubi5wZGYAAA4AIgAQAHYAZQB0AGUAcgBlADIAMAAxADkAbgBuAC4AcABkAGYADwAMAAUAbQBhAGMATwBTABIAPVVzZXJzL3dpdHRrdWhuL0RvY3VtZW50cy9iaWJsaW9ncmFwaHkvcGFwZXJzL3ZldGVyZTIwMTlubi5wZGYAABMAAS8AABUAAgAP//8AAAAIAA0AGgAkAEEAAAAAAAACAQAAAAAAAAAFAAAAAAAAAAAAAAAAAAABsQ==}}
+	Bdsk-File-1 = {YnBsaXN0MDDSAQIDBFxyZWxhdGl2ZVBhdGhZYWxpYXNEYXRhXxAaLi4vcGFwZXJzL3ZldGVyZTIwMTlubi5wZGZPEQFsAAAAAAFsAAIAAAVtYWNPUwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQkQAAf////8QdmV0ZXJlMjAxOW5uLnBkZgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////wAAAABQREYgQ0FSTwABAAIAAAogY3UAAAAAAAAAAAAAAAAABnBhcGVycwACAD8vOlVzZXJzOndpdHRrdWhuOkRvY3VtZW50czpiaWJsaW9ncmFwaHk6cGFwZXJzOnZldGVyZTIwMTlubi5wZGYAAA4AIgAQAHYAZQB0AGUAcgBlADIAMAAxADkAbgBuAC4AcABkAGYADwAMAAUAbQBhAGMATwBTABIAPVVzZXJzL3dpdHRrdWhuL0RvY3VtZW50cy9iaWJsaW9ncmFwaHkvcGFwZXJzL3ZldGVyZTIwMTlubi5wZGYAABMAAS8AABUAAgAP//8AAAAIAA0AGgAkAEEAAAAAAAACAQAAAAAAAAAFAAAAAAAAAAAAAAAAAAABsQ==}}
 
 @article{Chen2016NN,
 	abstract = {Our lives revolve around sharing experiences and memories with others. When different people recount the same events, how similar are their underlying neural representations? Participants viewed a 50-min movie, then verbally described the events during functional MRI, producing unguided detailed descriptions lasting up to 40 min. As each person spoke, event-specific spatial patterns were reinstated in default-network, medial-temporal, and high-level visual areas. Individual event patterns were both highly discriminable from one another and similar among people, suggesting consistent spatial organization. In many high-order areas, patterns were more similar between people recalling the same event than between recall and perception, indicating systematic reshaping of percept into memory. These results reveal the existence of a common spatial organization for memories in high-level cortical areas, where encoded information is largely abstracted beyond sensory constraints, and that neural patterns during perception are altered systematically across people into shared memory representations for real-life events.},
