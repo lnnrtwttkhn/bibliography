@@ -1,12 +1,47 @@
 %% This BibTeX bibliography file was created using BibDesk.
 %% https://bibdesk.sourceforge.io/
 
-%% Created for Wittkuhn, Lennart at 2021-02-11 18:09:07 +0100 
+%% Created for Wittkuhn, Lennart at 2021-02-12 11:34:49 +0100 
 
 
 %% Saved with string encoding Unicode (UTF-8) 
 
 
+
+@incollection{Sutton1990MLP1,
+	abstract = {This paper extends previous work with Dyna, a class of architectures for intelligent systems based on approximating dynamic programming methods. Dyna architectures integrate trial-and-error (reinforcement) learning and execution-time planning into a single process operating alternately on the world and on a learned model of the world. In this paper, I present and show results for two Dyna architectures. The Dyna-PI architecture is based on dynamic programming's policy iteration method and can be related to existing AI ideas such as evaluation functions and universal plans (reactive systems). Using a navigation task, results are shown for a simple Dyna-PI system that simultaneously learns by trial and error, learns a world model, and plans optimal routes using the evolving world model. The Dyna-Q architecture is based on Watkins's Q-learning, a new kind of reinforcement learning. Dyna-Q uses a less familiar set of data structures than does Dyna-PI, but is arguably simpler to implement and use. We show that Dyna-Q architectures are easy to adapt for use in changing environments.},
+	address = {San Francisco (CA)},
+	author = {Sutton, Richard S.},
+	booktitle = {Machine Learning Proceedings 1990},
+	date-added = {2021-02-12 11:20:06 +0100},
+	date-modified = {2021-02-12 11:21:18 +0100},
+	doi = {https://doi.org/10.1016/B978-1-55860-141-3.50030-4},
+	editor = {Porter, Bruce and Mooney, Raymond},
+	isbn = {978-1-55860-141-3},
+	journal = {Machine Learning Proceedings 1990},
+	pages = {216-224},
+	publisher = {Morgan Kaufmann},
+	title = {Integrated Architectures for Learning, Planning, and Reacting Based on Approximating Dynamic Programming},
+	url = {https://www.sciencedirect.com/science/article/pii/B9781558601413500304},
+	year = {1990},
+	Bdsk-File-1 = {YnBsaXN0MDDSAQIDBFxyZWxhdGl2ZVBhdGhZYWxpYXNEYXRhXxAcLi4vcGFwZXJzL3N1dHRvbjE5OTBtbHAxLnBkZk8RAXQAAAAAAXQAAgAABW1hY09TAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABCRAAB/////xJzdXR0b24xOTkwbWxwMS5wZGYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////AAAAAAAAAAAAAAAAAAEAAgAACiBjdQAAAAAAAAAAAAAAAAAGcGFwZXJzAAIAQS86VXNlcnM6d2l0dGt1aG46RG9jdW1lbnRzOmJpYmxpb2dyYXBoeTpwYXBlcnM6c3V0dG9uMTk5MG1scDEucGRmAAAOACYAEgBzAHUAdAB0AG8AbgAxADkAOQAwAG0AbABwADEALgBwAGQAZgAPAAwABQBtAGEAYwBPAFMAEgA/VXNlcnMvd2l0dGt1aG4vRG9jdW1lbnRzL2JpYmxpb2dyYXBoeS9wYXBlcnMvc3V0dG9uMTk5MG1scDEucGRmAAATAAEvAAAVAAIAD///AAAACAANABoAJABDAAAAAAAAAgEAAAAAAAAABQAAAAAAAAAAAAAAAAAAAbs=}}
+
+@article{Sutton2012AE,
+	abstract = {We consider the problem of efficiently learning optimal control policies and value functions over large state spaces in an online setting in which estimates must be available after each interaction with the world. This paper develops an explicitly model-based approach extending the Dyna architecture to linear function approximation. Dynastyle planning proceeds by generating imaginary experience from the world model and then applying model-free reinforcement learning algorithms to the imagined state transitions. Our main results are to prove that linear Dyna-style planning converges to a unique solution independent of the generating distribution, under natural conditions. In the policy evaluation setting, we prove that the limit point is the least-squares (LSTD) solution. An implication of our results is that prioritized-sweeping can be soundly extended to the linear approximation case, backing up to preceding features rather than to preceding states. We introduce two versions of prioritized sweeping with linear Dyna and briefly illustrate their performance empirically on the Mountain Car and Boyan Chain problems. },
+	archiveprefix = {arXiv},
+	author = {Sutton, Richard S. and Szepesv{\'{a}}ri, Csaba and Geramifard, Alborz and Bowling, Michael},
+	bibsource = {dblp computer science bibliography, https://dblp.org},
+	biburl = {https://dblp.org/rec/journals/corr/abs-1206-3285.bib},
+	date-added = {2021-02-12 11:15:55 +0100},
+	date-modified = {2021-02-12 11:17:22 +0100},
+	eprint = {1206.3285},
+	journal = {arXiv e-prints},
+	timestamp = {Mon, 13 Aug 2018 16:46:33 +0200},
+	title = {Dyna-Style Planning with Linear Function Approximation and Prioritized Sweeping},
+	url = {http://arxiv.org/abs/1206.3285},
+	volume = {abs/1206.3285},
+	year = {2012},
+	Bdsk-File-1 = {YnBsaXN0MDDSAQIDBFxyZWxhdGl2ZVBhdGhZYWxpYXNEYXRhXxAaLi4vcGFwZXJzL3N1dHRvbjIwMTJhZS5wZGZPEQFsAAAAAAFsAAIAAAVtYWNPUwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQkQAAf////8Qc3V0dG9uMjAxMmFlLnBkZgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAABAAIAAAogY3UAAAAAAAAAAAAAAAAABnBhcGVycwACAD8vOlVzZXJzOndpdHRrdWhuOkRvY3VtZW50czpiaWJsaW9ncmFwaHk6cGFwZXJzOnN1dHRvbjIwMTJhZS5wZGYAAA4AIgAQAHMAdQB0AHQAbwBuADIAMAAxADIAYQBlAC4AcABkAGYADwAMAAUAbQBhAGMATwBTABIAPVVzZXJzL3dpdHRrdWhuL0RvY3VtZW50cy9iaWJsaW9ncmFwaHkvcGFwZXJzL3N1dHRvbjIwMTJhZS5wZGYAABMAAS8AABUAAgAP//8AAAAIAA0AGgAkAEEAAAAAAAACAQAAAAAAAAAFAAAAAAAAAAAAAAAAAAABsQ==}}
 
 @inbook{Las2014S,
 	abstract = {Comparative research in neuroscience can contribute to the understanding of general principles underlying brain function; it can also provide testable hypotheses that direct future research. This chapter provides a comparative review of the neurophysiology of the hippocampal formation across mammals. Over the last 40 years, the vast majority of findings on hippocampal electrophysiology were based on research from a single animal model---the rat. Yet, while rat hippocampal studies provided one of the richest datasets in systems neuroscience, the paradigms generated based on rat data were, until recently, largely untested in other mammals---and at least some of the ideas have been questioned by the few studies that were conducted in other species. Here we will summarize the data available from different mammalian species regarding hippocampal neurophysiology, focusing on similarities and differences across species---including functional implications. We will limit our discussion to two aspects: spatial cell types in the hippocampal formation and hippocampal oscillations. We will conclude by highlighting some of the major gaps in the available comparative data and by raising a ``call to arms'' to conduct further comparative research on the hippocampal formation.},
@@ -24,7 +59,7 @@
 	title = {Hippocampal Neurophysiology Across Species},
 	url = {https://doi.org/10.1007/978-3-7091-1292-2_16},
 	year = {2014},
-	Bdsk-File-1 = {YnBsaXN0MDDSAQIDBFxyZWxhdGl2ZVBhdGhZYWxpYXNEYXRhXxAWLi4vcGFwZXJzL2xhczIwMTRzLnBkZk8RAVwAAAAAAVwAAgAABW1hY09TAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABCRAAB/////wxsYXMyMDE0cy5wZGYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////AAAAAAAAAAAAAAAAAAEAAgAACiBjdQAAAAAAAAAAAAAAAAAGcGFwZXJzAAIAOy86VXNlcnM6d2l0dGt1aG46RG9jdW1lbnRzOmJpYmxpb2dyYXBoeTpwYXBlcnM6bGFzMjAxNHMucGRmAAAOABoADABsAGEAcwAyADAAMQA0AHMALgBwAGQAZgAPAAwABQBtAGEAYwBPAFMAEgA5VXNlcnMvd2l0dGt1aG4vRG9jdW1lbnRzL2JpYmxpb2dyYXBoeS9wYXBlcnMvbGFzMjAxNHMucGRmAAATAAEvAAAVAAIAD///AAAACAANABoAJAA9AAAAAAAAAgEAAAAAAAAABQAAAAAAAAAAAAAAAAAAAZ0=}}
+	Bdsk-File-1 = {YnBsaXN0MDDSAQIDBFxyZWxhdGl2ZVBhdGhZYWxpYXNEYXRhXxAWLi4vcGFwZXJzL2xhczIwMTRzLnBkZk8RAVwAAAAAAVwAAgAABW1hY09TAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABCRAAB/////wxsYXMyMDE0cy5wZGYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////AAAAAFBERiBDQVJPAAEAAgAACiBjdQAAAAAAAAAAAAAAAAAGcGFwZXJzAAIAOy86VXNlcnM6d2l0dGt1aG46RG9jdW1lbnRzOmJpYmxpb2dyYXBoeTpwYXBlcnM6bGFzMjAxNHMucGRmAAAOABoADABsAGEAcwAyADAAMQA0AHMALgBwAGQAZgAPAAwABQBtAGEAYwBPAFMAEgA5VXNlcnMvd2l0dGt1aG4vRG9jdW1lbnRzL2JpYmxpb2dyYXBoeS9wYXBlcnMvbGFzMjAxNHMucGRmAAATAAEvAAAVAAIAD///AAAACAANABoAJAA9AAAAAAAAAgEAAAAAAAAABQAAAAAAAAAAAAAAAAAAAZ0=}}
 
 @article{DuBrow2017COBS,
 	abstract = {Theories of episodic memory have proposed that individual memory traces are linked together by a representation of context that drifts slowly over time. Recent data challenge the notion that contextual drift is always slow and passive. In particular, changes in one's external environment or internal model induce discontinuities in memory that are reflected in sudden changes in neural activity, suggesting that context can shift abruptly. Furthermore, context change effects are sensitive to top-down goals, suggesting that contextual drift may be an active process. These findings call for revising models of the role of context in memory, in order to account for abrupt contextual shifts and the controllable nature of context change.},
