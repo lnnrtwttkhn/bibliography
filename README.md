@@ -165,3 +165,7 @@ The following links have helped me to create my own bibliography repo (thank you
 * [Blog post on "BibTeX-friendly PDF management with Zotero" by Richard Zach](https://richardzach.org/2019/02/09/bibtex-friendly-pdf-management-with-zotero/)
 * [WikiBooks entry on hyphenation in LaTeX](https://en.wikibooks.org/wiki/LaTeX/Text_Formatting#Hyphenation)
 * ["How to add global hyphenation rules?"- discussion on StackExchange](https://tex.stackexchange.com/questions/27890/how-to-add-global-hyphenation-rules)
+* ["GitHub issue with cross-referencing DT::datatable"](https://github.com/rstudio/bookdown/issues/313)
+* ["Stack Overflow discussion about cross-referencing DT::datatable"](https://stackoverflow.com/questions/49819892/cross-referencing-dtdatatable-in-bookdown)
+* ["Blog post about separating keywords in Biblatex"](http://kiluvonprince.de/bibtex-bibliographies-selected-by-keywords-with-customised-keyword-separators/)
+* ["GitHub issue discussing keywords in Biblatex and biber"](https://github.com/plk/biblatex/issues/241)
