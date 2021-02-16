@@ -145,7 +145,28 @@ ggplot(data = bib_replay_time, aes(x = year, y = N)) +
   ylim(c(0, 70))
 ```
 
+## Intracranial recordings in humans
 
+In this section, I filter publications in the `bibliography.bib` file for papers using **intracranial recordings in humans**.
+The matching papers are listed in Figure \@ref(fig:human-intracranial).
+Many (but not all) of them are investigating replay-like signals in the medial temporal lobe and therefore establish important correspondence to electrophysiological recordings of replay in rodents.
+
+```{r, human-intracranial, fig.cap="Table listing studies using intracranial recordings in humans."}
+bib_intracranial = bib %>%
+  filter(stringr::str_detect(string = tags, pattern = "human")) %>%
+  filter(stringr::str_detect(string = tags, pattern = "intracranial")) %>%
+  setDT(.) %>%
+  .[,c("ID", "title", "author", "year", "journal", "url")]
+DT::datatable(
+  data = bib_intracranial,
+  class = "cell-border stripe", rownames = FALSE, escape = FALSE,
+  options = list(
+    scrollX = TRUE,
+    pageLength = 5,
+    lengthMenu = c(5, 10, 15, 20)
+  ),
+) 
+```
 
 ## Missing PDFs
 
