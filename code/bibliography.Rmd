@@ -18,8 +18,6 @@ fig.align: "center"
 email: wittkuhn@mpib-berlin.mpg.de
 ---
 
-# Bibliography
-
 [![Build Status](https://travis-ci.com/lnnrtwttkhn/bibliography.svg?branch=master)](https://travis-ci.com/lnnrtwttkhn/bibliography)
 
 ```{r, warning=FALSE, message=FALSE, results='hide', echo=FALSE}
@@ -47,16 +45,19 @@ bib_all = bib %>%
   .[,c("ID", "title", "author", "year", "journal", "url")]
 ```
 
-## Overview
+# Overview
 
-Welcome! This website shows the entire bibliography maintained by Lennart Wittkuhn.
+Welcome! This website showcases the bibliography maintained by Lennart Wittkuhn.
 
-At the moment, this bibliography contains `r nrow(bib)` references for publications in neuroscience, psychology, statistics, artificial intelligence, meta-science and more.
-The lastest reference was added on `r format(as.Date(max(bib$date_added_converted), format = "%Y-%m-%d %H:%M:%S %z"), "%d %B, %Y")`.
+At the moment, this bibliography contains **`r nrow(bib)` references** for publications in neuroscience, psychology, statistics, artificial intelligence, meta-science and more.
+The last reference was added on `r format(as.Date(max(bib$date_added_converted), format = "%Y-%m-%d %H:%M:%S %z"), "%d %B, %Y")`.
 
 The source code of this website can be found at <https://github.com/lnnrtwttkhn/bibliography/>.
 
-## Usage
+To understand how the bibliographical data was processed in this document, you can click on the `Code` tabs on the right.
+For example, by clicking on the first `Code` tab on the right, you will be able to see the R code that was used to load and process the bibliographical information stored in the `bibliography.bib` file. 
+
+# Usage
 
 The table below lists all references sorted by the first author's last name, publication year, and journal name (in that order).
 
@@ -86,11 +87,18 @@ In the sections below, I filter the bibliography e.g., depending on certain keyw
 
 ## Replay
 
-Table of publications that mention `replay` in the abstract:
+Table \@ref(fig:replay-year) list all publications in the `bibliography.bib` file that mention the term `replay` in the abstract or the title:
 
-```{r}
+```{r, replay, fig.cap="Table listing studies mentioning 'replay' in the abstract."}
+search_terms = c("replay")
 bib_replay = bib %>%
-  filter(stringr::str_detect(string = abstract, pattern = "replay")) %>%
+  transform(abstract = tolower(abstract), title = tolower(title)) %>%
+  filter_at(
+    .vars = vars(abstract, title),
+    .vars_predicate = any_vars(
+      stringr::str_detect(
+        string = .,
+        pattern = paste(search_terms, collapse = "|")))) %>%
   setDT(.) %>%
   .[,c("ID", "title", "author", "year", "journal", "url")]
 DT::datatable(
