@@ -148,14 +148,15 @@ ggplot(data = bib_replay_time, aes(x = year, y = N)) +
 ## Replay Literature Reviews
 
 In this section, I filter publications in the `bibliography.bib` file for **literature review papers on replay**.
-The matching papers are listed in Figure \@ref(fig:replay-review).
+The matching papers are listed in Figure \@ref(fig:replay-review), sorted by year in descending order (newest to oldest) and author name (alphabetical).
 
 ```{r, replay-review, fig.cap="Table of literature reviews on replay."}
 bib_replay_review = bib %>%
   filter(stringr::str_detect(string = tags, pattern = "replay")) %>%
   filter(stringr::str_detect(string = tags, pattern = "review")) %>%
   setDT(.) %>%
-  .[,c("ID", "title", "author", "year", "journal", "url")]
+  .[,c("ID", "title", "author", "year", "journal", "url")] %>%
+  setorder(., -year, author)
 DT::datatable(
   data = bib_replay_review,
   class = "cell-border stripe", rownames = FALSE, escape = FALSE,
