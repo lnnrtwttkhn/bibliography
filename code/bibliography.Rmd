@@ -87,7 +87,7 @@ In the sections below, I filter the bibliography e.g., depending on certain keyw
 
 ## Replay
 
-Table \@ref(fig:replay-year) list all publications in the `bibliography.bib` file that mention the term `replay` in the abstract or the title:
+Table \@ref(fig:replay) list all publications in the `bibliography.bib` file that mention the term `replay` in the abstract or the title:
 
 ```{r, replay, fig.cap="Table listing studies mentioning 'replay' in the abstract."}
 search_terms = c("replay")
