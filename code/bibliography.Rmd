@@ -92,15 +92,16 @@ Table \@ref(fig:replay-year) list all publications in the `bibliography.bib` fil
 ```{r, replay, fig.cap="Table listing studies mentioning 'replay' in the abstract."}
 search_terms = c("replay")
 bib_replay = bib %>%
-  transform(abstract = tolower(abstract), title = tolower(title)) %>%
+  .[, ":="(abstract_lower = tolower(abstract), title_lower = tolower(title))] %>%
   filter_at(
-    .vars = vars(abstract, title),
+    .vars = vars(abstract_lower, title_lower),
     .vars_predicate = any_vars(
       stringr::str_detect(
         string = .,
         pattern = paste(search_terms, collapse = "|")))) %>%
   setDT(.) %>%
-  .[,c("ID", "title", "author", "year", "journal", "url")]
+  .[, c("ID", "title", "author", "year", "journal", "url")] %>%
+  setorder(author, year)
 DT::datatable(
   bib_replay,
   class = "cell-border stripe", rownames = FALSE, escape = FALSE,
