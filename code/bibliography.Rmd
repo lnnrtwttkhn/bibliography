@@ -200,6 +200,40 @@ DT::datatable(
 ) 
 ```
 
+## Successor representation
+
+```{r}
+search_terms = "successor representation"
+bib_successor_representation = bib %>%
+  .[, ":="(abstract_lower = tolower(abstract), title_lower = tolower(title))] %>%
+  # search for search terms in title and abstract
+  filter_at(
+    .vars = vars(abstract_lower, title_lower),
+    .vars_predicate = any_vars(
+      stringr::str_detect(
+        string = .,
+        pattern = paste(search_terms, collapse = "|")))) %>%
+  setDT(.) %>%
+  .[,c("ID", "title", "author", "year", "journal", "url")]
+```
+
+In this section, I filter publications in the `bibliography.bib` file for papers on the **successor-representation** in reinforcement learning.
+The matching papers are listed in Figure \@ref(fig:successor-representation).
+The filter searches for the keyword `successor representation` in the `title`, `abstract` or `tags` of the bibliography entries.
+`r nrow(bib_successor_representation)` matching papers were found.
+
+```{r, successor-representation, fig.cap="Table listing studies on the successor-representation in reinforcement learning."}
+DT::datatable(
+  data = bib_successor_representation,
+  class = "cell-border stripe", rownames = FALSE, escape = FALSE,
+  options = list(
+    scrollX = TRUE,
+    pageLength = 5,
+    lengthMenu = c(5, 10, 15, 20)
+  ),
+) 
+```
+
 ## Missing PDFs
 
 List all publications with missing PDFs:
