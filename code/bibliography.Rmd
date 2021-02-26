@@ -115,6 +115,7 @@ DT::datatable(
 
 Figure \@ref(fig:replay-year) shows the number of papers published per year, containing replay-related search terms in the abstract.
 Note, that the numbers are based only on the publications in the bibliography.
+The bibliography likely does not contain *all* publications on `replay` or `reactivation` in the literature.
 
 ```{r}
 search_terms = c("replay", "reactivation")
@@ -151,7 +152,7 @@ ggplot(data = bib_replay_time, aes(x = year, y = N)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
   theme(plot.title = element_text(hjust = 0.5)) +
   geom_text(aes(label = N), vjust = -0.5) +
-  ylim(c(0, 70))
+  ylim(c(0, 80))
 ```
 
 ## Replay Literature Reviews
