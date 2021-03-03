@@ -69,7 +69,9 @@ When you use the `bibliography.bib` file in one of your documents (in LaTeX) and
 
 If a reference is missing, please [get in touch](#contact).
 
-```{r}
+Figure \@ref(fig:bib-complete) shows a table of the entire bibliography.
+
+```{r, bib-complete, fig.cap="Table of all publications in `bibliography.bib`."}
 DT::datatable(
   bib_all,
   class = "cell-border stripe", rownames = FALSE, escape = FALSE,
@@ -218,7 +220,7 @@ bib_successor_representation = bib %>%
   .[,c("ID", "title", "author", "year", "journal", "url")]
 ```
 
-In this section, I filter publications in the `bibliography.bib` file for papers on the **successor-representation** in reinforcement learning.
+In this section, I filter publications in the `bibliography.bib` file for papers on the **successor representation** in reinforcement learning.
 The matching papers are listed in Figure \@ref(fig:successor-representation).
 The filter searches for the keyword `successor representation` in the `title`, `abstract` or `tags` of the bibliography entries.
 `r nrow(bib_successor_representation)` matching papers were found.
@@ -237,9 +239,9 @@ DT::datatable(
 
 ## Missing PDFs
 
-List all publications with missing PDFs:
+Figure \@ref(fig:missing-pdfs) lists all publications with missing PDFs.
 
-```{r}
+```{r, missing-pdfs, fig.cap="Table of all publications with a missing PDF."}
 bib_pdf = bib %>%
   filter(get("bdsk-file-1") == "") %>%
   filter(journal != "Zenodo") %>%
@@ -258,7 +260,11 @@ DT::datatable(
 
 ## Missing abstracts
 
-```{r}
+In some of the sections above, I use information from the abstract to filter publications for specific keywords.
+It is therefore important that the `abstract` information is complete.
+In Figure \@ref(fig:missing-abstract) I filter for all publications with missing `abstract` information to continously update this information.
+
+```{r, missing-abstract, fig.cap="Table of all publications with a missing abstract."}
 bib_abstract = bib %>%
   filter(get("abstract") == "") %>%
   filter(journal != "Zenodo") %>%
@@ -300,13 +306,13 @@ ggplot(data = bib_time, aes(x = date_added_converted, y = num_added)) +
   coord_capped_cart(bottom = "both", left = "both") +
   scale_x_date(date_breaks = "1 months", date_labels =  "%b %Y") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
-  theme(plot.title = element_text(hjust = 0.5)) +
-  annotate("segment", x = as.Date("2020-11-01 UTC"),
-           xend = as.Date("2020-12-01 UTC"), y = 45, yend = 45,
-           colour = "red", arrow = arrow(length = unit(0.30, "cm"))) +
-  geom_label(aes(x = as.Date("2020-10-01 UTC"), y = 45,
-        label = "hectic review\nwriting starts"),
-        color = "red", size = 3, fontface = "bold")
+  theme(plot.title = element_text(hjust = 0.5))
+  #annotate("segment", x = as.Date("2020-11-01 UTC"),
+  #         xend = as.Date("2020-12-01 UTC"), y = 45, yend = 45,
+  #         colour = "red", arrow = arrow(length = unit(0.30, "cm"))) +
+  #geom_label(aes(x = as.Date("2020-10-01 UTC"), y = 45,
+  #      label = "hectic review\nwriting starts"),
+  #      color = "red", size = 3, fontface = "bold")
 ```
 
 # Contact
@@ -324,12 +330,27 @@ The Python script below (`parser.py`) reads the `bibliography.bib` file and uses
 ```{python, echo=TRUE, code=readLines(here::here("code", "parser.py")), eval=FALSE, python.reticulate=FALSE, class.source = 'fold-show'}
 ```
 
-This website was built using the following computational environment:
+The `R Markdown` notebook is then rendered on every push to the repo using continuous integration via Travis:
 
-```{r}
-sessionInfo()
+```{bash, echo=TRUE, code=readLines(here::here(".travis.yml")), eval=FALSE, class.source = 'fold-show'}
+```
+
+The continuous integration executes a simple `Makefile` that first runs the `parser.py` and then the `bibliography.Rmd` notebook:
+
+```{bash, echo=TRUE, code=readLines(here::here("Makefile")), eval=FALSE, class.source = 'fold-show'}
+```
+
+The dependencies of the Python code are listed in `requirements.txt`:
+
+```{bash, echo=TRUE, code=readLines(here::here("requirements.txt")), eval=FALSE, class.source = 'fold-show'}
+```
+
+This R Markdown notebook was built using the following computational environment:
+
+```{r, results="hold"}
 # set back to old locale
 Sys.setlocale("LC_TIME", loc) 
+sessionInfo()
 ```
 
 
