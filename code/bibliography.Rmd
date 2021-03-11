@@ -237,6 +237,40 @@ DT::datatable(
 ) 
 ```
 
+## Cognitive maps
+
+```{r}
+search_terms = "cognitive map"
+bib_cognitive_map = bib %>%
+  .[, ":="(abstract_lower = tolower(abstract), title_lower = tolower(title))] %>%
+  # search for search terms in title and abstract
+  filter_at(
+    .vars = vars(abstract_lower, title_lower, tags),
+    .vars_predicate = any_vars(
+      stringr::str_detect(
+        string = .,
+        pattern = paste(search_terms, collapse = "|")))) %>%
+  setDT(.) %>%
+  .[,c("ID", "title", "author", "year", "journal", "url")]
+```
+
+In this section, I filter publications in the `bibliography.bib` file for papers on **cognitive maps**.
+The matching papers are listed in Figure \@ref(fig:cognitive-map).
+The filter searches for the keyword `cognitive map` in the `title`, `abstract` or `tags` of the bibliography entries.
+`r nrow(bib_cognitive_map)` matching papers were found.
+
+```{r, cognitive-map, fig.cap="Table listing bibliography entries containing `cognitive map`"}
+DT::datatable(
+  data = bib_cognitive_map,
+  class = "cell-border stripe", rownames = FALSE, escape = FALSE,
+  options = list(
+    scrollX = TRUE,
+    pageLength = 5,
+    lengthMenu = c(5, 10, 15, 20)
+  ),
+) 
+```
+
 ## Missing PDFs
 
 Figure \@ref(fig:missing-pdfs) lists all publications with missing PDFs.
