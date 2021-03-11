@@ -50,7 +50,7 @@ bib_all = bib %>%
 Welcome! This website showcases the bibliography maintained by Lennart Wittkuhn.
 
 At the moment, this bibliography contains **`r nrow(bib)` references** for publications in neuroscience, psychology, statistics, artificial intelligence, meta-science and more.
-The last reference was added on `r format(as.Date(max(bib$date_added_converted), format = "%Y-%m-%d %H:%M:%S %z"), "%d %B, %Y")`.
+The website was last updated on `r format(as.Date(max(bib$date_added_converted), format = "%Y-%m-%d %H:%M:%S %z"), "%d %B, %Y")`.
 
 The source code of this website can be found at <https://github.com/lnnrtwttkhn/bibliography/>.
 
