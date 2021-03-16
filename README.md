@@ -169,3 +169,4 @@ The following links have helped me to create my own bibliography repo (thank you
 * ["Stack Overflow discussion about cross-referencing DT::datatable"](https://stackoverflow.com/questions/49819892/cross-referencing-dtdatatable-in-bookdown)
 * ["Blog post about separating keywords in Biblatex"](http://kiluvonprince.de/bibtex-bibliographies-selected-by-keywords-with-customised-keyword-separators/)
 * ["GitHub issue discussing keywords in Biblatex and biber"](https://github.com/plk/biblatex/issues/241)
+* ["How to not mess up your bibliographies with Bibtex" - blogpost by Claus O. Wilke](https://clauswilke.com/blog/2015/10/02/bibtex/)
