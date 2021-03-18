@@ -305,7 +305,7 @@ DT::datatable(
 ) 
 ```
 
-## Representation (learning)
+## Representations
 
 ```{r}
 search_terms = "representation"
@@ -323,8 +323,10 @@ bib_representation = bib %>%
 ```
 
 In this section, I filter publications in the `bibliography.bib` file for papers on **representations** and **representation learning**.
+This is a bit of challenge, because if you would search for "representation" in paper titles or abstracts, you would end up with a *long* list of papers, since the term is quite ubiquitous in neuroscience and psychology.
+Therefore, I here resort to manually annotating publications using the `tags` of the bibliography entries.
+The filter shown here searches for the keyword `representation` in the `tags` of the bibliography entries.
 The matching papers are listed in Figure \@ref(fig:representation).
-The filter searches for the keyword `representation` in the `tags` of the bibliography entries.
 `r nrow(bib_representation)` matching papers were found.
 
 ```{r, representation, fig.cap="Table listing bibliography entries containing `representation` in the `tags` field"}
