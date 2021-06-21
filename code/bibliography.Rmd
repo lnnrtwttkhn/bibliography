@@ -341,6 +341,40 @@ DT::datatable(
 ) 
 ```
 
+## Representational Drift
+
+```{r}
+search_terms = "representational drift"
+bib_representational_drift = bib %>%
+  .[, ":="(abstract_lower = tolower(abstract), title_lower = tolower(title))] %>%
+  # search for search terms in title and abstract
+  filter_at(
+    .vars = vars(abstract_lower, title_lower, tags),
+    .vars_predicate = any_vars(
+      stringr::str_detect(
+        string = .,
+        pattern = paste(search_terms, collapse = "|")))) %>%
+  setDT(.) %>%
+  .[,c("ID", "title", "author", "year", "journal", "url")]
+```
+
+In this section, I filter publications in the `bibliography.bib` file for papers on **representational drift**.
+The filter shown here searches for the keyword `representation` in the `abstract`, `title` and `tags` fields of the bibliography entries.
+The matching papers are listed in Figure \@ref(fig:representational-drift).
+In total, `r nrow(bib_representational_drift)` matching papers were found.
+
+```{r, representational-drift, fig.cap="Table listing bibliography entries containing `representational drift` in the `title`, `abstract` and `tags` field"}
+DT::datatable(
+  data = bib_representational_drift,
+  class = "cell-border stripe", rownames = FALSE, escape = FALSE,
+  options = list(
+    scrollX = TRUE,
+    pageLength = 5,
+    lengthMenu = c(5, 10, 15, 20)
+  ),
+) 
+```
+
 ## Zoo
 
 ```{r}
