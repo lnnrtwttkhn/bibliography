@@ -1,6 +1,3 @@
-# pdfs etc.
-papers
-*.pdf
 # latex auxiliary files:
 *.aux
 *.glo
