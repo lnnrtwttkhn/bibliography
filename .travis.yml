@@ -6,7 +6,7 @@ git:
   submodules: false
 before_install:
   - sudo apt-get install python3 python3-pip python3-pandas python3-setuptools
-  - pip3 install requirements
+  - pip3 install -r requirements.txt
 # command to run tests
 script:
   - make all
