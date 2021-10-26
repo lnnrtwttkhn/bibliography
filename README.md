@@ -80,6 +80,12 @@ Python 3.8.6
 
 To run the Python code in the `/code` directory, please install the required packages in [`requirements.txt`](requirements.txt) using `pip install -r requirements.txt`.
 
+### Create environment
+
+```bash
+mkvirtualenv -p $(which python3) -r requirements.txt bibliography
+```
+
 ## Usage
 
 ### Add repo as a submodule
