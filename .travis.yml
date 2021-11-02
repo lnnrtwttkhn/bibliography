@@ -12,7 +12,7 @@ before_install:
   - sudo apt-get update
   - sudo apt-get install python3.8 python3-pip python3-pandas python3-setuptools
   - pip3 install --upgrade pip
-  - pip install -r requirements.txt
+  - python-3.8 -m pip install -r requirements.txt
 # command to run tests
 script:
   - make all
