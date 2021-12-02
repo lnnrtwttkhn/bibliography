@@ -86,6 +86,26 @@ To run the Python code in the `/code` directory, please install the required pac
 mkvirtualenv -p $(which python3) -r requirements.txt bibliography
 ```
 
+### Docker
+
+After updating the [Dockerfile](Dockerfile), I use the following command to push the newest image to [dockerhub](https://hub.docker.com/r/lennartwittkuhn/bibliography):
+
+```bash
+docker login
+```
+
+```bash
+docker build -t  lennartwittkuhn/bibliography:latest .
+```
+
+```bash
+docker push lennartwittkuhn/bibliography:latest
+```
+
+```bash
+docker run --rm -v $PWD:/home lennartwittkuhn/bibliography /bin/sh -c "cd /home; make all"
+```
+
 ## Usage
 
 ### Add repo as a submodule
