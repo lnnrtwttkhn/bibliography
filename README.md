@@ -6,62 +6,10 @@ Website: https://lennartwittkuhn.com/bibliography/
 
 ## Description
 
-This repository contains my entire bibliography in a `.bib` file and several `.sty` files that I use to customize my LaTeX manuscripts.
+This repository contains my entire bibliography in a `.bib` file ([here](https://github.com/lnnrtwttkhn/bibliography/blob/master/code/bibliography.bib)) and several `.sty` files ([here](https://github.com/lnnrtwttkhn/bibliography/tree/master/code)) that I use to customize my LaTeX manuscripts.
 The bibliography mostly spans publications in cognitive and computational neuroscience, psychology and statistics.
 
-A table of all publications in the `bibliography.bib` file can be reviewed at https://lennartwittkuhn.com/bibliography/ (sorted by last name of first author, year of publication and journal name).
-
-## Overview
-
-### `bibliography.bib`
-
-The `bibliography.bib` is inside the `/code` folder.
-That way I can sync the `/code` folder with Seafile / Dropbox and provide a direct download link to Overleaf.
-
-The citation key syntax currently used is: `Last name of first author` + `Publication year` + `Journal Abbreviation`. Please note that the journal abbreviations do not follow specific standards but are determined by BibDesk. Also note, that in case the same first author published in the same journal in the same year, a lowercase letter will be included after the publication year to differentiate between the entries in question. This setup works quite nicely so far as in the research fields that I mostly follow, the same first author rarely published in the same journal in the same year. An exception from this are usually preprints (e.g., on bioRxiv) where the same first authors *do* publish more than once per year.
-
-The `/papers` folder contains all `.pdf` files and will not be synced with the repo. As a further enhancement I am looking into ways how to version-control and synchronize the `.pdf` files with the repo / a cloud sharing service to be able to access them across devices. There is a [corresponding open issue](https://github.com/lnnrtwttkhn/bibliography/issues/5) and help / ideas are very welcome! Thanks!
-
-### Glossary: `glossary.tex`
-
-The `glossary.tex` file contains an alphabetically sorted list with commonly used abbreviations.
-It is also located inside the `/code` folder.
-It can be very easily included in any LaTex manuscript using:
-
-```latex
-\usepackage{glossaries}
-\loadglsentries{glossary}
-```
-
-Note that the file extension `.tex` is not used when loading the glossary entries.
-
-### Style: `style.sty`
-
-The `style.sty` file contains some frequently used LaTeX packages that can be imported at the beginning
-of any LaTex manuscript using, for example:
-
-```latex
-\documentclass{article}
-\usepackage{style}
-```
-
-### Hyphenation: `hyphenation.sty`
-
-In general, LaTeX hyphenates words whenever necessary.
-In some cases, the hyphenation algorithm does not find the correct hyphenation points.
-A solution is to explicitly tell LaTeX about the expectation (for details, see e.g., [here](https://en.wikibooks.org/wiki/LaTeX/Text_Formatting#Hyphenation)).
-
-I collect hyphenation rules in the `hyphenation.sty` file which contains hyphenation rules for both English and German words.
-The file can simply be included in the preamble of any LaTeX document using:
-
-```latex
-\documentclass{article}
-\usepackage{hyphenation}
-```
-
----
-
-Again, please note that the file extension `.sty` is not used when importing the packages.
+A table of all references in the `bibliography.bib` file can be reviewed at https://lennartwittkuhn.com/bibliography/ (sorted by last name of first author, year of publication and journal name).
 
 ## Requirements
 
