@@ -236,3 +236,9 @@ Clean by removing:
 - [x] Doi
 - [x] Remote URL
 - [x] Date-Added
+
+## Rules
+
+* The `doi` file shall never contain `https://` etc.
+* You shall not worry about changing the capitalization of words in the title. LaTeX / Overleaf / the `apacite` package handle this automatically!
+

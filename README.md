@@ -57,21 +57,6 @@ If you can't or don't want to add the repo as a submodule to your manuscript rep
 * In Overleaf, I can select `Upload` and add files `From External URL`
 * Here, I paste the direct download link as the `URL to fetch the file from` and set the `File Name in this Project` to be the same link in the repo
 
-## Rules
-
-* The `doi` file shall never contain `https://` etc.
-* You shall not worry about changing the capitalization of words in the title. LaTex / Overleaf / the `apacite` package handle this automatically! :clap:
-
-## Notes
-
-Current format string for local file format:
-
-```
-%f{Cite Key}%u0%e
-```
-
-This means that citation keys and pdf have the same name.
-
 ## Contributing
 
 If you have any suggestions for improvement, please [contact Lennart Wittkuhn](mailto:wittkuhn@mpib-berlin.mpg.de) or [create a new issue on the issue board](https://github.com/lnnrtwttkhn/bibliography/issues).
