@@ -25,7 +25,9 @@
 *.xdy
 *.fdb_latexmk
 *.fls
-# code output
+# code output:
 *.html
 public
 .Rproj.user
+# misc:
+.DS_Store
