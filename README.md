@@ -4,7 +4,7 @@
 
 Website: https://lennartwittkuhn.com/bibliography/
 
-## Description
+## About
 
 This repository contains my entire bibliography in a `.bib` file ([here](https://github.com/lnnrtwttkhn/bibliography/blob/master/code/bibliography.bib)) and several `.sty` files ([here](https://github.com/lnnrtwttkhn/bibliography/tree/master/code)) that I use to customize my LaTeX manuscripts.
 The bibliography mostly spans publications in cognitive and computational neuroscience, psychology and statistics.
