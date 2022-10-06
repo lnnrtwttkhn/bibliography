@@ -13,22 +13,24 @@ A table of all references in the `bibliography.bib` file can be reviewed at http
 
 ## Requirements
 
+### Managing the `.bib` and `.sty` files
+
 The software below is not a strict requirement but merely a list of tools I use to manage my bibliography.
 This is just to help the interested reader with the software choice and acknowledge the tools that make this bibliography management possible.
 
-* A good text editor of your choice (I use Atom)
-* BibDesk Version 1.7.9 (5416)
+* A text editor (I currently use [Atom](https://atom.io/) version 1.60.0 on macOS)
+* [BibDesk](https://bibdesk.sourceforge.io/) (I currently use BibDesk version 1.8.13  on macOS)
+
+### Run Python code
 
 ```bash
 $ python3 --version
 Python 3.8.6
 ```
 
-### Run Python code
-
 To run the Python code in the `/code` directory, please install the required packages in [`requirements.txt`](requirements.txt) using `pip install -r requirements.txt`.
 
-### Create environment
+Create environment
 
 ```bash
 mkvirtualenv -p $(which python3) -r requirements.txt bibliography
