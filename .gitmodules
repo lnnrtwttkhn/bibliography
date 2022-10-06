@@ -2,3 +2,7 @@
 	path = papers
 	url = git@gin.g-node.org:/lnnrtwttkhn/papers.git
 	datalad-id = e2d34bd8-25d5-11ec-95ad-8c859041f10d
+[submodule "papers"]
+	path = papers
+	url = ./papers
+	datalad-id = e2d34bd8-25d5-11ec-95ad-8c859041f10d
