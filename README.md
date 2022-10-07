@@ -11,6 +11,12 @@ The bibliography mostly spans publications in cognitive and computational neuros
 
 A table of all references in the `bibliography.bib` file can be reviewed at https://lennartwittkuhn.com/bibliography/ (sorted by last name of first author, year of publication and journal name).
 
+## Installation
+
+```bash
+datalad install --recursive git@github.com:lnnrtwttkhn/bibliography.git
+```
+
 ## Requirements
 
 ### Managing the `.bib` and `.sty` files
