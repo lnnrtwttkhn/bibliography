@@ -12,5 +12,5 @@
 	datalad-id = e2d34bd8-25d5-11ec-95ad-8c859041f10d
 [submodule "notes"]
 	path = notes
-	url = ./notes
+	url = git@github.com:lnnrtwttkhn/bibliography-notes.git
 	datalad-id = 3924d62f-b492-4c74-ab55-f364d903a2e9
