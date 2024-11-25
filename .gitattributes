@@ -6,3 +6,4 @@ README.md annex.largefiles=nothing
 .travis.yml annex.largefiles=nothing
 Makefile annex.largefiles=nothing
 requirements.txt annex.largefiles=nothing
+.Rbuildignore annex.largefiles=nothing
