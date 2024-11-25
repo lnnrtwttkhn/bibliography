@@ -1,4 +1,3 @@
-
 * annex.backend=MD5E
 **/.git* annex.largefiles=nothing
 CHANGELOG.md annex.largefiles=nothing
@@ -7,3 +6,5 @@ README.md annex.largefiles=nothing
 Makefile annex.largefiles=nothing
 requirements.txt annex.largefiles=nothing
 .Rbuildignore annex.largefiles=nothing
+renv.lock annex.largefiles=nothing
+.Rprofile annex.largefiles=nothing
